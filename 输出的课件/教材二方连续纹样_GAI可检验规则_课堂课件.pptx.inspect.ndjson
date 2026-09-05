@@ -1,0 +1,438 @@
+{"kind":"deck","id":"pr/vu82uh","name":"Deck"}
+{"kind":"layout","layoutId":"1c95315e-2582-468a-a7ae-7314c617e0b0","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"da5361da-0f07-44e0-87bb-1b4bdd4ef90a","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/eizrx6","slide":1,"title":"教材综合与实践 · 活动1","textShapes":5}
+{"kind":"shape","id":"sh/yxo3ypsn","slide":1,"bbox":[0,0,20,720]}
+{"kind":"textbox","id":"sh/l0zmt4re","slide":1,"text":"教材综合与实践 · 活动1","textPreview":"教材综合与实践 · 活动1","textChars":13,"textLines":1,"bbox":[72,66,430,30]}
+{"kind":"textbox","id":"sh/0zql0zat","slide":1,"text":"从图形运动到\n可检验规则","textPreview":"从图形运动到 | 可检验规则","textChars":12,"textLines":2,"bbox":[72,135,650,185]}
+{"kind":"textbox","id":"sh/bax4nu9c","slide":1,"text":"让同伴能复现 · 让AI能执行 · 让结果能检验","textPreview":"让同伴能复现 · 让AI能执行 · 让结果能检验","textChars":24,"textLines":1,"bbox":[76,340,690,48]}
+{"kind":"shape","id":"sh/q9o3upsr","slide":1,"bbox":[76,418,580,4]}
+{"kind":"textbox","id":"sh/dwfmpkr2","slide":1,"text":"二方连续纹样｜七年级上册｜40分钟","textPreview":"二方连续纹样｜七年级上册｜40分钟","textChars":17,"textLines":1,"bbox":[76,447,600,36]}
+{"kind":"shape","id":"sh/cb6lwzax","slide":1,"bbox":[790,105,390,490]}
+{"kind":"shape","id":"sh/36x4ja90","slide":1,"bbox":[820,230,58.8,58.8]}
+{"kind":"shape","id":"sh/2543q5sf","slide":1,"bbox":[838.9,248.9,21,21]}
+{"kind":"shape","id":"sh/ozmd07u9","slide":1,"bbox":[800.05,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/pkvetcvu","slide":1,"bbox":[860.95,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/2x4vyxc3","slide":1,"bbox":[843.1,221.6,12.6,12.6]}
+{"kind":"shape","id":"sh/3ydwr2do","slide":1,"bbox":[902,230,58.8,58.8]}
+{"kind":"shape","id":"sh/gv2dw7ud","slide":1,"bbox":[920.9,248.9,21,21]}
+{"kind":"shape","id":"sh/1wvepcvy","slide":1,"bbox":[882.05,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/etkvuxc7","slide":1,"bbox":[942.95,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/futwn2ds","slide":1,"bbox":[925.1,221.6,12.6,12.6]}
+{"kind":"shape","id":"sh/0r6x8ruh","slide":1,"bbox":[984,230,58.8,58.8]}
+{"kind":"shape","id":"sh/lsfe1wb2","slide":1,"bbox":[1002.9,248.9,21,21]}
+{"kind":"shape","id":"sh/9wrm5szu","slide":1,"bbox":[964.05,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/8vi5wni9","slide":1,"bbox":[1024.95,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/nu9432ho","slide":1,"bbox":[1007.1,221.6,12.6,12.6]}
+{"kind":"shape","id":"sh/m90nux0j","slide":1,"bbox":[1066,230,58.8,58.8]}
+{"kind":"shape","id":"sh/l8rm1szy","slide":1,"bbox":[1084.9,248.9,21,21]}
+{"kind":"shape","id":"sh/07i5snid","slide":1,"bbox":[1046.05,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/z694zihs","slide":1,"bbox":[1106.95,245.75,39.9,23.1]}
+{"kind":"shape","id":"sh/y50nqd07","slide":1,"bbox":[1089.1,221.6,12.6,12.6]}
+{"kind":"shape","id":"sh/d47mx8zm","slide":1,"bbox":[820,350,58.8,58.8]}
+{"kind":"shape","id":"sh/c3y5o3i1","slide":1,"bbox":[838.9,368.9,21,21]}
+{"kind":"shape","id":"sh/29wjy9gz","slide":1,"bbox":[800.05,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/3a5k7exk","slide":1,"bbox":[860.95,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/obel0jy5","slide":1,"bbox":[843.1,341.6,12.6,12.6]}
+{"kind":"shape","id":"sh/pcn29ofq","slide":1,"bbox":[902,350,58.8,58.8]}
+{"kind":"shape","id":"sh/e5cju9g3","slide":1,"bbox":[920.9,368.9,21,21]}
+{"kind":"shape","id":"sh/f65k3exo","slide":1,"bbox":[882.05,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/g7e1wzyt","slide":1,"bbox":[942.95,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/18n254fe","slide":1,"bbox":[925.1,400.4,12.6,12.6]}
+{"kind":"shape","id":"sh/6hcjqpgr","slide":1,"bbox":[984,350,58.8,58.8]}
+{"kind":"shape","id":"sh/rilkzuhc","slide":1,"bbox":[1002.9,368.9,21,21]}
+{"kind":"shape","id":"sh/ju5gba18","slide":1,"bbox":[964.05,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/itwz25kn","slide":1,"bbox":[1024.95,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/5wnyd0je","slide":1,"bbox":[1007.1,341.6,12.6,12.6]}
+{"kind":"shape","id":"sh/kveh4v2t","slide":1,"bbox":[1066,350,58.8,58.8]}
+{"kind":"shape","id":"sh/v6lg7q1w","slide":1,"bbox":[1084.9,368.9,21,21]}
+{"kind":"shape","id":"sh/a5cfylkb","slide":1,"bbox":[1046.05,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/xsny90j2","slide":1,"bbox":[1106.95,365.75,39.9,23.1]}
+{"kind":"shape","id":"sh/wruh0v2h","slide":1,"bbox":[1089.1,400.4,12.6,12.6]}
+{"kind":"textbox","id":"sh/n2lg3q10","slide":1,"text":"观察 → 表达 → 检验 → 迁移","textPreview":"观察 → 表达 → 检验 → 迁移","textChars":17,"textLines":1,"bbox":[815,500,340,44]}
+{"kind":"notes","id":"nt/eizrx6","slide":1,"text":"开场不讲AI功能，先说明今天仍然学习教材活动1，只增加一个挑战：规则必须能被陌生人执行。\n建议用时：1分钟。\n[Sources]\n- 上海教育出版社《数学教学参考资料（七年级上册）2025》，“从传统连续纹样到现代镶嵌图案”部分\n[/Sources]"}
+{"kind":"slide","id":"sl/r5ntno","slide":2,"title":"教材原任务","textShapes":5}
+{"kind":"shape","id":"sh/md0fyxsz","slide":2,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/90betsbq","slide":2,"text":"教材原任务","textPreview":"教材原任务","textChars":5,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/8z2x0na5","slide":2,"text":"今天不另起项目：就在教材表1里研究","textPreview":"今天不另起项目：就在教材表1里研究","textChars":17,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/v2tgv2tg","slide":2,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/a1kf2xsv","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/w32x47a1","slide":2,"text":"原任务\n\n找出单位纹样\n识别变换方式","textPreview":"原任务 |  | 找出单位纹样 | 识别变换方式","textChars":18,"textLines":4,"bbox":[842,168,326,176]}
+{"kind":"textbox","id":"sh/b6pwjitc","slide":2,"text":"再设计只多问一步\n\n你写的规则，\n陌生人能否复现？","textPreview":"再设计只多问一步 |  | 你写的规则， | 陌生人能否复现？","textChars":25,"textLines":4,"bbox":[842,370,326,220]}
+{"kind":"image","id":"im/sv6hknmh","slide":2,"name":"","geometry":"roundRect","alt":"教材活动1中四行二方连续纹样","bbox":[58,155,744,470]}
+{"kind":"notes","id":"nt/r5ntno","slide":2,"text":"强调教材教师用书给活动1的建议课时就是1课时。今天不做校园设计节，不扩展到四方连续和镶嵌。\n建议用时：2分钟。\n[Sources]\n- 本页教材图样来自用户提供课件《综合与实践-从传统连续纹样到现代镶嵌图案》，第10页\n- 上海教育出版社《数学教学参考资料（七年级上册）2025》，第187—189页\n[/Sources]"}
+{"kind":"slide","id":"sl/lbbvzf","slide":3,"title":"核心挑战","textShapes":10}
+{"kind":"shape","id":"sh/g7qd8f69","slide":3,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/f6hcfa54","slide":3,"text":"核心挑战","textPreview":"核心挑战","textChars":4,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/e58v65oj","slide":3,"text":"一条好规则，要经得起“看不见原图”","textPreview":"一条好规则，要经得起“看不见原图”","textChars":17,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/t4zud0ny","slide":3,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/s3qd4v6d","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/r2hcbq5s","slide":3,"text":"请想象：原图被收走了。","textPreview":"请想象：原图被收走了。","textChars":11,"textLines":1,"bbox":[76,165,710,54]}
+{"kind":"textbox","id":"sh/618v2lo7","slide":3,"text":"规则作者","textPreview":"规则作者","textChars":4,"textLines":1,"bbox":[82,273,250,82]}
+{"kind":"textbox","id":"sh/5gzu9gnm","slide":3,"text":"只交文字规则","textPreview":"只交文字规则","textChars":6,"textLines":1,"bbox":[360,283,260,60]}
+{"kind":"textbox","id":"sh/4f6d0v6h","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[620,270,85,80]}
+{"kind":"textbox","id":"sh/adgj2x0f","slide":3,"text":"陌生执行者","textPreview":"陌生执行者","textChars":5,"textLines":1,"bbox":[720,273,260,82]}
+{"kind":"textbox","id":"sh/bepkv2h0","slide":3,"text":"能否画出前三个单元？","textPreview":"能否画出前三个单元？","textChars":10,"textLines":1,"bbox":[196,425,820,70]}
+{"kind":"textbox","id":"sh/wfy147il","slide":3,"text":"标准不是“我懂你的意思”，而是“规则排除了别的解释”。","textPreview":"标准不是“我懂你的意思”，而是“规则排除了别的解释”。","textChars":27,"textLines":1,"bbox":[196,525,820,44]}
+{"kind":"notes","id":"nt/lbbvzf","slide":3,"text":"向学生宣布任务条件：规则作者不能给原图、不能口头解释；执行者可以在无法确定处标“？”。\n建议用时：1分钟。"}
+{"kind":"slide","id":"sl/xc3sjt","slide":4,"title":"先观察，再命名","textShapes":10}
+{"kind":"shape","id":"sh/d4ne9kn6","slide":4,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/q1cfe5of","slide":4,"text":"先观察，再命名","textPreview":"先观察，再命名","textChars":7,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/r25w7a50","slide":4,"text":"任务1｜圈单位 · 标对应点 · 画运动箭头","textPreview":"任务1｜圈单位 · 标对应点 · 画运动箭头","textChars":22,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/4fuxcf6p","slide":4,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/5g3e50na","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"shape","id":"sh/idcfa5oj","slide":4,"bbox":[72,160,1136,280]}
+{"kind":"shape","id":"sh/3elw3a54","slide":4,"bbox":[185,255,64.4,64.4]}
+{"kind":"shape","id":"sh/gbux8v6d","slide":4,"bbox":[205.7,275.7,23,23]}
+{"kind":"shape","id":"sh/hc3e107y","slide":4,"bbox":[163.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/9kvet0vu","slide":4,"bbox":[229.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/ojmx0vu9","slide":4,"bbox":[210.3,245.8,13.8,13.8]}
+{"kind":"shape","id":"sh/nidwrad4","slide":4,"bbox":[310,255,64.4,64.4]}
+{"kind":"shape","id":"sh/mhkfy5cj","slide":4,"bbox":[330.7,275.7,23,23]}
+{"kind":"shape","id":"sh/1gbep0vy","slide":4,"bbox":[288.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/0f2xwvud","slide":4,"bbox":[354.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/zetwnqds","slide":4,"bbox":[335.3,245.8,13.8,13.8]}
+{"kind":"shape","id":"sh/etkfulc7","slide":4,"bbox":[435,255,64.4,64.4]}
+{"kind":"shape","id":"sh/dsbelgvm","slide":4,"bbox":[455.7,275.7,23,23]}
+{"kind":"shape","id":"sh/cr2xsbu1","slide":4,"bbox":[413.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/4v6x8v2x","slide":4,"bbox":[479.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/5wfe103i","slide":4,"bbox":[460.3,245.8,13.8,13.8]}
+{"kind":"shape","id":"sh/it4f6lk7","slide":4,"bbox":[560,255,64.4,64.4]}
+{"kind":"shape","id":"sh/3udwzqls","slide":4,"bbox":[580.7,275.7,23,23]}
+{"kind":"shape","id":"sh/g7mx4b21","slide":4,"bbox":[538.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/h8vexg3m","slide":4,"bbox":[604.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/u54f21kv","slide":4,"bbox":[585.3,245.8,13.8,13.8]}
+{"kind":"shape","id":"sh/v6dwv6lg","slide":4,"bbox":[685,255,64.4,64.4]}
+{"kind":"shape","id":"sh/03qxgf25","slide":4,"bbox":[705.7,275.7,23,23]}
+{"kind":"shape","id":"sh/14zy9k3q","slide":4,"bbox":[663.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/by10ze5s","slide":4,"bbox":[729.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/axsz694n","slide":4,"bbox":[710.3,245.8,13.8,13.8]}
+{"kind":"shape","id":"sh/xkji14ny","slide":4,"bbox":[810,255,64.4,64.4]}
+{"kind":"shape","id":"sh/wjah8jmd","slide":4,"bbox":[830.7,275.7,23,23]}
+{"kind":"shape","id":"sh/jml03e54","slide":4,"bbox":[788.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/ylsja94j","slide":4,"bbox":[854.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/lo3i5ona","slide":4,"bbox":[835.3,245.8,13.8,13.8]}
+{"kind":"shape","id":"sh/knu1cjmp","slide":4,"bbox":[935,255,64.4,64.4]}
+{"kind":"shape","id":"sh/fqh0ru50","slide":4,"bbox":[955.7,275.7,23,23]}
+{"kind":"shape","id":"sh/ep8zyp4f","slide":4,"bbox":[913.15,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/69czepcb","slide":4,"bbox":[979.85,272.25,43.7,25.3]}
+{"kind":"shape","id":"sh/ral0nudg","slide":4,"bbox":[960.3,245.8,13.8,13.8]}
+{"kind":"textbox","id":"sh/sbu1gzu1","slide":4,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[187,220,40,28]}
+{"kind":"textbox","id":"sh/tc3ip4vm","slide":4,"text":"A′","textPreview":"A′","textChars":2,"textLines":1,"bbox":[312,220,40,28]}
+{"kind":"textbox","id":"sh/edcji9c7","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[235,193,65,40]}
+{"kind":"textbox","id":"sh/fyl0ruds","slide":4,"text":"① 你选的“最小单位”在哪里？","textPreview":"① 你选的“最小单位”在哪里？","textChars":15,"textLines":1,"bbox":[78,475,350,100]}
+{"kind":"textbox","id":"sh/gze1kzud","slide":4,"text":"② 对应点怎样移动？","textPreview":"② 对应点怎样移动？","textChars":10,"textLines":1,"bbox":[464,475,350,100]}
+{"kind":"textbox","id":"sh/10nit4vy","slide":4,"text":"③ 同一纹样能选不同单位吗？","textPreview":"③ 同一纹样能选不同单位吗？","textChars":14,"textLines":1,"bbox":[850,475,350,100]}
+{"kind":"textbox","id":"sh/21wjm9c3","slide":4,"text":"个人2分钟 → 小组3分钟","textPreview":"个人2分钟 → 小组3分钟","textChars":13,"textLines":1,"bbox":[450,610,380,34]}
+{"kind":"notes","id":"nt/xc3sjt","slide":4,"text":"分配教材表1第二、三、四行。学生先个人圈画，再小组比较。\n不要急着判“唯一单位”，重点追问哪种单位更便于说明生成关系。\n建议用时：5分钟。\n[Sources]\n- 教材活动1表1，用户提供课件《综合与实践-从传统连续纹样到现代镶嵌图案》第10—12页\n[/Sources]"}
+{"kind":"slide","id":"sl/x6z0qo","slide":5,"title":"不要先看模板","textShapes":11}
+{"kind":"shape","id":"sh/yxcz2psv","slide":5,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/l03yd4rm","slide":5,"text":"不要先看模板","textPreview":"不要先看模板","textChars":6,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/kzuh4za1","slide":5,"text":"规则卡1.0｜先写你的原生表达","textPreview":"规则卡1.0｜先写你的原生表达","textChars":15,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/bu1g7atk","slide":5,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/atsfy5sz","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/xw3y9kba","slide":5,"text":"“把这个图案向右连续复制。”","textPreview":"“把这个图案向右连续复制。”","textChars":14,"textLines":1,"bbox":[92,173,1096,115]}
+{"kind":"textbox","id":"sh/wvah0fa5","slide":5,"text":"这句话让执行者必须猜什么？","textPreview":"这句话让执行者必须猜什么？","textChars":13,"textLines":1,"bbox":[92,318,1096,56]}
+{"kind":"textbox","id":"sh/vq5gje9o","slide":5,"text":"移动谁？","textPreview":"移动谁？","textChars":4,"textLines":1,"bbox":[86,420,200,90]}
+{"kind":"textbox","id":"sh/upwza9s3","slide":5,"text":"怎样移动？","textPreview":"怎样移动？","textChars":5,"textLines":1,"bbox":[310,420,200,90]}
+{"kind":"textbox","id":"sh/snqho7yh","slide":5,"text":"移动多少？","textPreview":"移动多少？","textChars":5,"textLines":1,"bbox":[534,420,200,90]}
+{"kind":"textbox","id":"sh/t8zyxcz2","slide":5,"text":"重复到哪里？","textPreview":"重复到哪里？","textChars":6,"textLines":1,"bbox":[758,420,200,90]}
+{"kind":"textbox","id":"sh/6lozmxgb","slide":5,"text":"怎样算正确？","textPreview":"怎样算正确？","textChars":6,"textLines":1,"bbox":[982,420,200,90]}
+{"kind":"textbox","id":"sh/rmhgv2hw","slide":5,"text":"现在先按你自己的语言写，不抄五要素。","textPreview":"现在先按你自己的语言写，不抄五要素。","textChars":18,"textLines":1,"bbox":[270,565,740,42]}
+{"kind":"notes","id":"nt/x6z0qo","slide":5,"text":"学生写规则卡1.0，教师不提供五要素。保留“缺口”，才能让后面的执行差异成为证据。\n建议用时：5分钟。"}
+{"kind":"slide","id":"sl/5ddj87","slide":6,"title":"第一执行者","textShapes":12}
+{"kind":"shape","id":"sh/0jml8fqd","slide":6,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/zitkfu98","slide":6,"text":"第一执行者","textPreview":"第一执行者","textChars":5,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/ehk36p8n","slide":6,"text":"同伴盲执行｜不看原图，不猜作者意图","textPreview":"同伴盲执行｜不看原图，不猜作者意图","textChars":17,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/98v2l4ra","slide":6,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/o7mlczqp","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/n6dkju94","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[75,175,74,54]}
+{"kind":"textbox","id":"sh/m543ap8j","slide":6,"text":"交换规则\n\n只交文字，不交原图","textPreview":"交换规则 |  | 只交文字，不交原图","textChars":15,"textLines":3,"bbox":[75,245,250,205]}
+{"kind":"textbox","id":"sh/5cb290rq","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[367,175,74,54]}
+{"kind":"textbox","id":"sh/4b210vql","slide":6,"text":"画前三单元\n\n严格按规则，不能脑补","textPreview":"画前三单元 |  | 严格按规则，不能脑补","textChars":17,"textLines":3,"bbox":[367,245,250,205]}
+{"kind":"textbox","id":"sh/q5gnqpsj","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[659,175,74,54]}
+{"kind":"textbox","id":"sh/r6pozu94","slide":6,"text":"标出“？”\n\n方向、距离、轴、顺序不明就停","textPreview":"标出“？” |  | 方向、距离、轴、顺序不明就停","textChars":21,"textLines":3,"bbox":[659,245,250,205]}
+{"kind":"textbox","id":"sh/c7y5sfap","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[951,175,74,54]}
+{"kind":"textbox","id":"sh/d8761kra","slide":6,"text":"写一句追问\n\n指出哪一个词允许多种解释","textPreview":"写一句追问 |  | 指出哪一个词允许多种解释","textChars":19,"textLines":3,"bbox":[951,245,250,205]}
+{"kind":"textbox","id":"sh/e9gnupsf","slide":6,"text":"执行差异不是“失败”，而是规则缺口的第一层证据。","textPreview":"执行差异不是“失败”，而是规则缺口的第一层证据。","textChars":24,"textLines":1,"bbox":[160,520,960,62]}
+{"kind":"notes","id":"nt/5ddj87","slide":6,"text":"执行者可在方格纸上画，也可只画运动框和关键点。\n教师巡看时只问“你依据规则中的哪句话这样画”，不替作者解释。\n建议用时：5分钟。"}
+{"kind":"slide","id":"sl/off0rv","slide":7,"title":"比较","textShapes":6}
+{"kind":"shape","id":"sh/ni907atg","slide":7,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/8ji10fa1","slide":7,"text":"比较","textPreview":"比较","textChars":2,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/9kri90bm","slide":7,"text":"同一句“向右连续排列”，为什么会有两个结果？","textPreview":"同一句“向右连续排列”，为什么会有两个结果？","textChars":22,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/ydgjulsz","slide":7,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/zep03qtk","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/0fy1wvap","slide":7,"text":"结果A｜全部同向","textPreview":"结果A｜全部同向","textChars":8,"textLines":1,"bbox":[70,160,550,58]}
+{"kind":"shape","id":"sh/lg7i50ba","slide":7,"bbox":[70,235,550,250]}
+{"kind":"shape","id":"sh/q9wzqlsn","slide":7,"bbox":[125,325,58.8,58.8]}
+{"kind":"shape","id":"sh/bap0zqt8","slide":7,"bbox":[143.9,343.9,21,21]}
+{"kind":"shape","id":"sh/ny10fqdw","slide":7,"bbox":[105.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/2xsz6lwb","slide":7,"bbox":[165.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/p0jih0vm","slide":7,"bbox":[148.1,316.6,12.6,12.6]}
+{"kind":"shape","id":"sh/ozah8ve1","slide":7,"bbox":[245,325,58.8,58.8]}
+{"kind":"shape","id":"sh/b2l0jads","slide":7,"bbox":[263.9,343.9,21,21]}
+{"kind":"shape","id":"sh/a1sza5w7","slide":7,"bbox":[225.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/x43il0vy","slide":7,"bbox":[285.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/c3uhcfed","slide":7,"bbox":[268.1,316.6,12.6,12.6]}
+{"kind":"shape","id":"sh/r6hg76do","slide":7,"bbox":[365,325,58.8,58.8]}
+{"kind":"shape","id":"sh/q58zy1w3","slide":7,"bbox":[383.9,343.9,21,21]}
+{"kind":"shape","id":"sh/ulg369gr","slide":7,"bbox":[345.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/vmpkfexw","slide":7,"bbox":[405.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/wnyl8jyh","slide":7,"bbox":[388.1,316.6,12.6,12.6]}
+{"kind":"shape","id":"sh/ho72hof2","slide":7,"bbox":[485,325,58.8,58.8]}
+{"kind":"shape","id":"sh/mxw329gf","slide":7,"bbox":[503.9,343.9,21,21]}
+{"kind":"shape","id":"sh/7y5kbex0","slide":7,"bbox":[465.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/8jel4zyl","slide":7,"bbox":[525.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/9kn2d4f6","slide":7,"bbox":[508.1,316.6,12.6,12.6]}
+{"kind":"textbox","id":"sh/ytcjypgj","slide":7,"text":"结果B｜一正一反","textPreview":"结果B｜一正一反","textChars":8,"textLines":1,"bbox":[660,160,550,58]}
+{"kind":"shape","id":"sh/zu5k7ux4","slide":7,"bbox":[660,235,550,250]}
+{"kind":"shape","id":"sh/18b6dszm","slide":7,"bbox":[715,325,58.8,58.8]}
+{"kind":"shape","id":"sh/0n254ni1","slide":7,"bbox":[733.9,343.9,21,21]}
+{"kind":"shape","id":"sh/fmtob2hg","slide":7,"bbox":[695.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/elkn2x0v","slide":7,"bbox":[755.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/dkb69sza","slide":7,"bbox":[738.1,316.6,12.6,12.6]}
+{"kind":"shape","id":"sh/sji50nip","slide":7,"bbox":[835,325,58.8,58.8]}
+{"kind":"shape","id":"sh/ri9o7ih4","slide":7,"bbox":[853.9,343.9,21,21]}
+{"kind":"shape","id":"sh/qh0nyd0z","slide":7,"bbox":[815.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/5grm58ze","slide":7,"bbox":[875.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/4fi5w3it","slide":7,"bbox":[858.1,375.4,12.6,12.6]}
+{"kind":"shape","id":"sh/4jadcrip","slide":7,"bbox":[955,325,58.8,58.8]}
+{"kind":"shape","id":"sh/5kje5cza","slide":7,"bbox":[973.9,343.9,21,21]}
+{"kind":"shape","id":"sh/ihsvah0j","slide":7,"bbox":[935.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/ji1w3mh4","slide":7,"bbox":[995.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/snuxgri1","slide":7,"bbox":[978.1,316.6,12.6,12.6]}
+{"kind":"shape","id":"sh/to3e9wz6","slide":7,"bbox":[1075,325,58.8,58.8]}
+{"kind":"shape","id":"sh/6lsveh0v","slide":7,"bbox":[1093.9,343.9,21,21]}
+{"kind":"shape","id":"sh/rm1w7mhg","slide":7,"bbox":[1055.05,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/8rqd4nih","slide":7,"bbox":[1115.95,340.75,39.9,23.1]}
+{"kind":"shape","id":"sh/9szexsz2","slide":7,"bbox":[1098.1,375.4,12.6,12.6]}
+{"kind":"textbox","id":"sh/b65gja1k","slide":7,"text":"先别问“哪幅更像”｜请问：原规则排除了哪一种解释？","textPreview":"先别问“哪幅更像”｜请问：原规则排除了哪一种解释？","textChars":25,"textLines":1,"bbox":[145,535,990,60]}
+{"kind":"notes","id":"nt/off0rv","slide":7,"text":"把两张同伴盲执行图或预设示意并列。\n引出：没有写“仅平移”或“先轴对称再平移”时，规则本身可能允许多解。\n建议用时：2分钟。"}
+{"kind":"slide","id":"sl/lcgl1z","slide":8,"title":"规则脚手架","textShapes":15}
+{"kind":"shape","id":"sh/ls3qlwjq","slide":8,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/y5crah0f","slide":8,"text":"规则脚手架","textPreview":"规则脚手架","textChars":5,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/jql8jm10","slide":8,"text":"从执行差异中，提炼五个不可缺失的问题","textPreview":"从执行差异中，提炼五个不可缺失的问题","textChars":18,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/8vu9grih","slide":8,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/tw3apwj2","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/6tcreh0b","slide":8,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[61,165,80,72]}
+{"kind":"textbox","id":"sh/7ul8nm1w","slide":8,"text":"基本图案\n\n移动谁？边界在哪里？","textPreview":"基本图案 |  | 移动谁？边界在哪里？","textChars":16,"textLines":3,"bbox":[61,250,218,220]}
+{"kind":"textbox","id":"sh/oza947id","slide":8,"text":"T","textPreview":"T","textChars":1,"textLines":1,"bbox":[300,165,80,72]}
+{"kind":"textbox","id":"sh/90jqdcji","slide":8,"text":"运动方式\n\n平移／旋转／轴对称？顺序？","textPreview":"运动方式 |  | 平移／旋转／轴对称？顺序？","textChars":19,"textLines":3,"bbox":[300,250,218,220]}
+{"kind":"textbox","id":"sh/lgzyhg72","slide":8,"text":"λ","textPreview":"λ","textChars":1,"textLines":1,"bbox":[539,165,80,72]}
+{"kind":"textbox","id":"sh/0fqhob6x","slide":8,"text":"运动要素\n\n方向、距离、轴／中心／角度？","textPreview":"运动要素 |  | 方向、距离、轴／中心／角度？","textChars":20,"textLines":3,"bbox":[539,250,218,220]}
+{"kind":"textbox","id":"sh/zehgf6pc","slide":8,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[778,165,80,72]}
+{"kind":"textbox","id":"sh/yd8zm1or","slide":8,"text":"重复范围\n\n向哪里、重复几次？","textPreview":"重复范围 |  | 向哪里、重复几次？","textChars":15,"textLines":3,"bbox":[778,250,218,220]}
+{"kind":"textbox","id":"sh/9kzilg7e","slide":8,"text":"V","textPreview":"V","textChars":1,"textLines":1,"bbox":[1017,165,80,72]}
+{"kind":"textbox","id":"sh/8jqhsb6t","slide":8,"text":"验收条件\n\n怎样用数学证据判定？","textPreview":"验收条件 |  | 怎样用数学证据判定？","textChars":16,"textLines":3,"bbox":[1017,250,218,220]}
+{"kind":"textbox","id":"sh/nih0j6p8","slide":8,"text":"R = ( G , T , λ , D , V )","textPreview":"R = ( G , T , λ , D , V )","textChars":25,"textLines":1,"bbox":[330,515,620,64]}
+{"kind":"textbox","id":"sh/mh8zqlon","slide":8,"text":"符号可以不背，但五个问题必须能回答。","textPreview":"符号可以不背，但五个问题必须能回答。","textChars":18,"textLines":1,"bbox":[315,590,650,36]}
+{"kind":"notes","id":"nt/lcgl1z","slide":8,"text":"由学生刚才的追问归纳五要素，不要求机械背符号。\n“V验收条件”是本课区别于一般提示词写作的关键。\n建议用时：3分钟。"}
+{"kind":"slide","id":"sl/sxeiyv","slide":9,"title":"示例","textShapes":17}
+{"kind":"shape","id":"sh/43y9gzap","slide":9,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/32psnut4","slide":9,"text":"示例","textPreview":"示例","textChars":2,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/21grepsj","slide":9,"text":"把“向右复制”改成一条可执行规则","textPreview":"把“向右复制”改成一条可执行规则","textChars":16,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/hg7qlkby","slide":9,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/gfy9cfat","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"shape","id":"sh/fep8jat8","slide":9,"bbox":[68,160,470,430]}
+{"kind":"shape","id":"sh/udgrapsn","slide":9,"bbox":[125,315,61.6,61.6]}
+{"kind":"shape","id":"sh/1cbaxobi","slide":9,"bbox":[144.8,334.8,22,22]}
+{"kind":"shape","id":"sh/0b29ojax","slide":9,"bbox":[104.1,331.5,41.8,24.2]}
+{"kind":"shape","id":"sh/ulw76x8b","slide":9,"bbox":[167.9,331.5,41.8,24.2]}
+{"kind":"shape","id":"sh/vm58zi9w","slide":9,"bbox":[149.2,306.2,13.2,13.2]}
+{"kind":"shape","id":"sh/gnep8nqh","slide":9,"bbox":[98,297,125,94]}
+{"kind":"shape","id":"sh/honq1s72","slide":9,"bbox":[250,315,61.6,61.6]}
+{"kind":"shape","id":"sh/6hw72d8f","slide":9,"bbox":[269.8,334.8,22,22]}
+{"kind":"shape","id":"sh/7i58vi90","slide":9,"bbox":[229.1,331.5,41.8,24.2]}
+{"kind":"shape","id":"sh/8jep4nql","slide":9,"bbox":[292.9,331.5,41.8,24.2]}
+{"kind":"shape","id":"sh/tknqxsrq","slide":9,"bbox":[274.2,306.2,13.2,13.2]}
+{"kind":"shape","id":"sh/qdgreh8j","slide":9,"bbox":[223,297,125,94]}
+{"kind":"shape","id":"sh/rep872p4","slide":9,"bbox":[375,315,61.6,61.6]}
+{"kind":"shape","id":"sh/ny14zupg","slide":9,"bbox":[394.8,334.8,22,22]}
+{"kind":"shape","id":"sh/mx8n69ov","slide":9,"bbox":[354.1,331.5,41.8,24.2]}
+{"kind":"shape","id":"sh/90jm147m","slide":9,"bbox":[417.9,331.5,41.8,24.2]}
+{"kind":"shape","id":"sh/oza58z61","slide":9,"bbox":[399.2,306.2,13.2,13.2]}
+{"kind":"shape","id":"sh/b2143eps","slide":9,"bbox":[348,297,125,94]}
+{"kind":"textbox","id":"sh/a1sna9o7","slide":9,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[153,278,32,25]}
+{"kind":"textbox","id":"sh/xoj65o7i","slide":9,"text":"A′","textPreview":"A′","textChars":2,"textLines":1,"bbox":[278,278,32,25]}
+{"kind":"textbox","id":"sh/wna5cj6d","slide":9,"text":"4格","textPreview":"4格","textChars":2,"textLines":1,"bbox":[215,235,95,32]}
+{"kind":"textbox","id":"sh/jqlo7e5o","slide":9,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[202,270,110,35]}
+{"kind":"textbox","id":"sh/ypsneto3","slide":9,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[590,165,55,52]}
+{"kind":"textbox","id":"sh/gvulo3mh","slide":9,"text":"以方格框内的叶形为一个单位","textPreview":"以方格框内的叶形为一个单位","textChars":13,"textLines":1,"bbox":[655,158,530,66]}
+{"kind":"textbox","id":"sh/hw3mxo32","slide":9,"text":"T","textPreview":"T","textChars":1,"textLines":1,"bbox":[590,251,55,52]}
+{"kind":"textbox","id":"sh/utc3mt4b","slide":9,"text":"只作平移，不旋转、不镜像","textPreview":"只作平移，不旋转、不镜像","textChars":12,"textLines":1,"bbox":[655,244,530,66]}
+{"kind":"textbox","id":"sh/vul4vylw","slide":9,"text":"λ","textPreview":"λ","textChars":1,"textLines":1,"bbox":[590,337,55,52]}
+{"kind":"textbox","id":"sh/8rulkjm5","slide":9,"text":"每次向右平移4格","textPreview":"每次向右平移4格","textChars":8,"textLines":1,"bbox":[655,330,530,66]}
+{"kind":"textbox","id":"sh/ts3mto3q","slide":9,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[590,423,55,52]}
+{"kind":"textbox","id":"sh/6pc3i94f","slide":9,"text":"沿水平方向生成6个单元","textPreview":"沿水平方向生成6个单元","textChars":11,"textLines":1,"bbox":[655,416,530,66]}
+{"kind":"textbox","id":"sh/7ql4relk","slide":9,"text":"V","textPreview":"V","textChars":1,"textLines":1,"bbox":[590,509,55,52]}
+{"kind":"textbox","id":"sh/k3algzm9","slide":9,"text":"对应点同向等距；图形不变形；相邻边界无缝、无重叠","textPreview":"对应点同向等距；图形不变形；相邻边界无缝、无重叠","textChars":24,"textLines":1,"bbox":[655,502,530,66]}
+{"kind":"notes","id":"nt/sxeiyv","slide":9,"text":"示例只用于全班共建后，不要在规则卡1.0之前出现。\n提醒学生：平移本身已经保持形状和大小；“不变形”写入V，是为了验收AI输出。\n建议用时：2分钟。"}
+{"kind":"slide","id":"sl/uj7yll","slide":10,"title":"第二执行者","textShapes":8}
+{"kind":"shape","id":"sh/7edkzapw","slide":10,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/8fmlsvqh","slide":10,"text":"第二执行者","textPreview":"第二执行者","textChars":5,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/9gv2107m","slide":10,"text":"把规则交给AI｜只执行一次，保留原始输出","textPreview":"把规则交给AI｜只执行一次，保留原始输出","textChars":20,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/ypk3ml8z","slide":10,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/zatkvqpk","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/0b2lovq5","slide":10,"text":"统一执行提示","textPreview":"统一执行提示","textChars":6,"textLines":1,"bbox":[75,160,280,58]}
+{"kind":"textbox","id":"sh/lcb2x07q","slide":10,"text":"只按下列规则执行，不自行补充。\n若存在两种解释或信息不足，先列出无法确定的项目；\n再给出带网格与单元边界的示意结果。","textPreview":"只按下列规则执行，不自行补充。 | 若存在两种解释或信息不足，先列出无法确定的项目； | 再给出带网格与单元边界的示意结果。","textChars":58,"textLines":3,"bbox":[75,240,1130,180]}
+{"kind":"textbox","id":"sh/ql03il83","slide":10,"text":"输入前\n先预测：AI可能怎样理解？","textPreview":"输入前 | 先预测：AI可能怎样理解？","textChars":17,"textLines":2,"bbox":[85,475,350,110]}
+{"kind":"textbox","id":"sh/bmtkr6po","slide":10,"text":"输入时\n记录模型、规则原文和时间","textPreview":"输入时 | 记录模型、规则原文和时间","textChars":16,"textLines":2,"bbox":[467,475,350,110]}
+{"kind":"textbox","id":"sh/7ydgv2xw","slide":10,"text":"输出后\n先保存，不立刻重试或润色","textPreview":"输出后 | 先保存，不立刻重试或润色","textChars":16,"textLines":2,"bbox":[849,475,350,110]}
+{"kind":"notes","id":"nt/uj7yll","slide":10,"text":"每组选一条仍有争议的规则输入。只允许一次生成，避免课堂变成反复试词。\n若现场网络不可用，展示课前保存的三份典型输出。\n建议用时：5分钟。\n[Sources]\n- 教育部基础教育教学指导委员会《中小学生成式人工智能使用指南（2025年版）》\n[/Sources]"}
+{"kind":"slide","id":"sl/4z9ovb","slide":11,"title":"诊断矩阵","textShapes":24}
+{"kind":"shape","id":"sh/sbetg7ax","slide":11,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/7q5c72tc","slide":11,"text":"诊断矩阵","textPreview":"诊断矩阵","textChars":4,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/6pwbehsr","slide":11,"text":"同伴与AI都只是执行者｜数学条件才是裁判","textPreview":"同伴与AI都只是执行者｜数学条件才是裁判","textChars":20,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/5o3u5cb6","slide":11,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/knutc7al","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/jmlc32t0","slide":11,"text":"同伴复现","textPreview":"同伴复现","textChars":4,"textLines":1,"bbox":[98,164,260,93]}
+{"kind":"textbox","id":"sh/ilcbaxsf","slide":11,"text":"AI执行","textPreview":"AI执行","textChars":4,"textLines":1,"bbox":[358,164,260,93]}
+{"kind":"textbox","id":"sh/pk7uhwba","slide":11,"text":"先作什么诊断","textPreview":"先作什么诊断","textChars":6,"textLines":1,"bbox":[618,164,260,93]}
+{"kind":"textbox","id":"sh/4jytora5","slide":11,"text":"下一问","textPreview":"下一问","textChars":3,"textLines":1,"bbox":[878,164,260,93]}
+{"kind":"textbox","id":"sh/it0ji5wb","slide":11,"text":"一致","textPreview":"一致","textChars":2,"textLines":1,"bbox":[98,257,260,93]}
+{"kind":"textbox","id":"sh/ju9kbadw","slide":11,"text":"一致","textPreview":"一致","textChars":2,"textLines":1,"bbox":[358,257,260,93]}
+{"kind":"textbox","id":"sh/4vi1kfeh","slide":11,"text":"规则可能完整","textPreview":"规则可能完整","textChars":6,"textLines":1,"bbox":[618,257,260,93]}
+{"kind":"textbox","id":"sh/5wr2dkv2","slide":11,"text":"仍要数学验收","textPreview":"仍要数学验收","textChars":6,"textLines":1,"bbox":[878,257,260,93]}
+{"kind":"textbox","id":"sh/u5gje5wf","slide":11,"text":"不一致","textPreview":"不一致","textChars":3,"textLines":1,"bbox":[98,350,260,93]}
+{"kind":"textbox","id":"sh/v6p07ad0","slide":11,"text":"不一致","textPreview":"不一致","textChars":3,"textLines":1,"bbox":[358,350,260,93]}
+{"kind":"textbox","id":"sh/w7y1gfel","slide":11,"text":"规则可能有缺口","textPreview":"规则可能有缺口","textChars":7,"textLines":1,"bbox":[618,350,260,93]}
+{"kind":"textbox","id":"sh/h87i90v6","slide":11,"text":"缺在哪个要素？","textPreview":"缺在哪个要素？","textChars":7,"textLines":1,"bbox":[878,350,260,93]}
+{"kind":"textbox","id":"sh/e1kjqpcj","slide":11,"text":"一致","textPreview":"一致","textChars":2,"textLines":1,"bbox":[98,443,260,93]}
+{"kind":"textbox","id":"sh/f2tkjud4","slide":11,"text":"不一致","textPreview":"不一致","textChars":3,"textLines":1,"bbox":[358,443,260,93]}
+{"kind":"textbox","id":"sh/ru18v2pk","slide":11,"text":"AI可能执行错","textPreview":"AI可能执行错","textChars":7,"textLines":1,"bbox":[618,443,260,93]}
+{"kind":"textbox","id":"sh/qts7mx8z","slide":11,"text":"它违反哪条规则？","textPreview":"它违反哪条规则？","textChars":8,"textLines":1,"bbox":[878,443,260,93]}
+{"kind":"textbox","id":"sh/dwjqxs7a","slide":11,"text":"不一致","textPreview":"不一致","textChars":3,"textLines":1,"bbox":[98,536,260,93]}
+{"kind":"textbox","id":"sh/cvapo7qp","slide":11,"text":"一致","textPreview":"一致","textChars":2,"textLines":1,"bbox":[358,536,260,93]}
+{"kind":"textbox","id":"sh/zyl8z2pg","slide":11,"text":"AI可能自动补全","textPreview":"AI可能自动补全","textChars":8,"textLines":1,"bbox":[618,536,260,93]}
+{"kind":"textbox","id":"sh/exc7qx8v","slide":11,"text":"陌生人为何不能复现？","textPreview":"陌生人为何不能复现？","textChars":10,"textLines":1,"bbox":[878,536,260,93]}
+{"kind":"textbox","id":"sh/103q1c7m","slide":11,"text":"AI画出来 ≠ 规则正确　｜　AI没画对 ≠ 规则错误","textPreview":"AI画出来 ≠ 规则正确　｜　AI没画对 ≠ 规则错误","textChars":27,"textLines":1,"bbox":[190,630,900,36]}
+{"kind":"notes","id":"nt/4z9ovb","slide":11,"text":"用矩阵澄清：一致性只能用于初步诊断，不能替代正确性判断。\n特别讨论“规则明确但AI违规”的情形，保护学生的数学判断权。\n建议用时：3分钟。"}
+{"kind":"slide","id":"sl/zujgfk","slide":12,"title":"数学验收","textShapes":10}
+{"kind":"shape","id":"sh/ponupsj6","slide":12,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/2lwbed0f","slide":12,"text":"数学验收","textPreview":"数学验收","textChars":4,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/nm5cni10","slide":12,"text":"三类证据｜从“看起来”走向“可以证明”","textPreview":"三类证据｜从“看起来”走向“可以证明”","textChars":19,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/crydknih","slide":12,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/xs7utsz2","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/apwvix0b","slide":12,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[73,165,70,52]}
+{"kind":"textbox","id":"sh/bqpcri1w","slide":12,"text":"对应点\n\n选两组以上对应点\n核对方向与距离\n\n标点 · 量格","textPreview":"对应点 |  | 选两组以上对应点 | 核对方向与距离 |  | 标点 · 量格","textChars":30,"textLines":6,"bbox":[73,228,350,310]}
+{"kind":"textbox","id":"sh/svut83id","slide":12,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[463,165,70,52]}
+{"kind":"textbox","id":"sh/dw3uh8jy","slide":12,"text":"运动性质\n\n平移／旋转后全等\n轴对称后形状、大小保持\n\n描图 · 重叠","textPreview":"运动性质 |  | 平移／旋转后全等 | 轴对称后形状、大小保持 |  | 描图 · 重叠","textChars":35,"textLines":6,"bbox":[463,228,350,310]}
+{"kind":"textbox","id":"sh/1sb2l4vy","slide":12,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[853,165,70,52]}
+{"kind":"textbox","id":"sh/0r21czud","slide":12,"text":"边界衔接\n\n相邻单位无缝、无重叠\n继续延展无节奏突变\n\n描边 · 比较","textPreview":"边界衔接 |  | 相邻单位无缝、无重叠 | 继续延展无节奏突变 |  | 描边 · 比较","textChars":35,"textLines":6,"bbox":[853,228,350,310]}
+{"kind":"textbox","id":"sh/fqtkjuds","slide":12,"text":"验收结果要能回指：是规则缺了条件，还是AI违反了条件？","textPreview":"验收结果要能回指：是规则缺了条件，还是AI违反了条件？","textChars":27,"textLines":1,"bbox":[175,582,930,48]}
+{"kind":"notes","id":"nt/zujgfk","slide":12,"text":"学生在AI输出或同伴图上直接标注证据。\n不要单独说“连续性”，使用“边界衔接的一致性”，避免与函数连续性混淆。\n建议用时：4分钟。"}
+{"kind":"slide","id":"sl/t1zjj5","slide":13,"title":"条件辨析","textShapes":9}
+{"kind":"shape","id":"sh/8ny5k72l","slide":13,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/nmpor2l0","slide":13,"text":"条件辨析","textPreview":"条件辨析","textChars":4,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/mlgnixkf","slide":13,"text":"局部运动正确，不等于整体一定能连续延展","textPreview":"局部运动正确，不等于整体一定能连续延展","textChars":19,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/xsr6xc32","slide":13,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/wry5o72h","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/vqpov2lc","slide":13,"text":"规则写：每次向右平移4格","textPreview":"规则写：每次向右平移4格","textChars":12,"textLines":1,"bbox":[80,155,510,70]}
+{"kind":"textbox","id":"sh/apgnmhkr","slide":13,"text":"但单位框实际宽5格","textPreview":"但单位框实际宽5格","textChars":9,"textLines":1,"bbox":[690,155,510,70]}
+{"kind":"shape","id":"sh/dwn6ls3y","slide":13,"bbox":[80,260,1120,255]}
+{"kind":"shape","id":"sh/cve5cn2d","slide":13,"bbox":[150,350,61.6,61.6]}
+{"kind":"shape","id":"sh/ipc3ux0b","slide":13,"bbox":[169.8,369.8,22,22]}
+{"kind":"shape","id":"sh/3ql4n2hw","slide":13,"bbox":[129.1,366.5,41.8,24.2]}
+{"kind":"shape","id":"sh/4relwnih","slide":13,"bbox":[192.9,366.5,41.8,24.2]}
+{"kind":"shape","id":"sh/5snmpsz2","slide":13,"bbox":[174.2,341.2,13.2,13.2]}
+{"kind":"shape","id":"sh/qtw3yxgn","slide":13,"bbox":[123,332,180,94]}
+{"kind":"shape","id":"sh/ru54r2h8","slide":13,"bbox":[308,350,61.6,61.6]}
+{"kind":"shape","id":"sh/svel07yt","slide":13,"bbox":[327.8,369.8,22,22]}
+{"kind":"shape","id":"sh/dwnmtczy","slide":13,"bbox":[287.1,366.5,41.8,24.2]}
+{"kind":"shape","id":"sh/exw32hgj","slide":13,"bbox":[350.9,366.5,41.8,24.2]}
+{"kind":"shape","id":"sh/fip4vmh4","slide":13,"bbox":[332.2,341.2,13.2,13.2]}
+{"kind":"shape","id":"sh/bmpkjmxc","slide":13,"bbox":[281,332,180,94]}
+{"kind":"shape","id":"sh/alg3qhwr","slide":13,"bbox":[488,350,61.6,61.6]}
+{"kind":"shape","id":"sh/xo72lcfi","slide":13,"bbox":[507.8,369.8,22,22]}
+{"kind":"shape","id":"sh/cnylsrex","slide":13,"bbox":[467.1,366.5,41.8,24.2]}
+{"kind":"shape","id":"sh/nypkf2x0","slide":13,"bbox":[530.9,366.5,41.8,24.2]}
+{"kind":"shape","id":"sh/2xw3mxwv","slide":13,"bbox":[512.2,341.2,13.2,13.2]}
+{"kind":"shape","id":"sh/pk72hcf6","slide":13,"bbox":[461,332,180,94]}
+{"kind":"textbox","id":"sh/ozylo7el","slide":13,"text":"← 重叠1格 →","textPreview":"← 重叠1格 →","textChars":8,"textLines":1,"bbox":[245,455,260,34]}
+{"kind":"textbox","id":"sh/fu5kb2x4","slide":13,"text":"每一次都“平移了4格”，但边界没有匹配。","textPreview":"每一次都“平移了4格”，但边界没有匹配。","textChars":20,"textLines":1,"bbox":[650,325,460,55]}
+{"kind":"textbox","id":"sh/etwjixwj","slide":13,"text":"缺少的不是操作，而是验收条件 V。","textPreview":"缺少的不是操作，而是验收条件 V。","textChars":17,"textLines":1,"bbox":[650,402,460,44]}
+{"kind":"textbox","id":"sh/4zuhc3uh","slide":13,"text":"局部对应成立　≠　整体衔接成立","textPreview":"局部对应成立　≠　整体衔接成立","textChars":15,"textLines":1,"bbox":[250,565,780,52]}
+{"kind":"notes","id":"nt/t1zjj5","slide":13,"text":"这一页用于提升数学深度：学生区分局部对应与整体延展。\n也可以改成平移距离大于单位宽度，形成空隙。\n建议用时：2分钟。"}
+{"kind":"slide","id":"sl/gkjoi7","slide":14,"title":"迭代","textShapes":16}
+{"kind":"shape","id":"sh/1sv6t07a","slide":14,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/epk7iloz","slide":14,"text":"迭代","textPreview":"迭代","textChars":2,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/fqtorqp4","slide":14,"text":"规则卡2.0｜让修改留下证据","textPreview":"规则卡2.0｜让修改留下证据","textChars":14,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/sn2pgb6t","slide":14,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/dob6pg7e","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/q1knelon","slide":14,"text":"偏差","textPreview":"偏差","textChars":2,"textLines":1,"bbox":[75,175,230,58]}
+{"kind":"textbox","id":"sh/r2tonqp8","slide":14,"text":"第二个单位翻转","textPreview":"第二个单位翻转","textChars":7,"textLines":1,"bbox":[75,250,230,170]}
+{"kind":"textbox","id":"sh/4zi5cb6h","slide":14,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[305,302,50,54]}
+{"kind":"textbox","id":"sh/50b6lg72","slide":14,"text":"原因","textPreview":"原因","textChars":2,"textLines":1,"bbox":[355,175,230,58]}
+{"kind":"textbox","id":"sh/d8zehore","slide":14,"text":"规则未排除镜像","textPreview":"规则未排除镜像","textChars":7,"textLines":1,"bbox":[355,250,230,170]}
+{"kind":"textbox","id":"sh/c7qx8jat","slide":14,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[585,302,50,54]}
+{"kind":"textbox","id":"sh/b6hwfe98","slide":14,"text":"修改","textPreview":"修改","textChars":2,"textLines":1,"bbox":[635,175,230,58]}
+{"kind":"textbox","id":"sh/q58f69sn","slide":14,"text":"补充“仅作平移”","textPreview":"补充“仅作平移”","textChars":8,"textLines":1,"bbox":[635,250,230,170]}
+{"kind":"textbox","id":"sh/pkzed4r2","slide":14,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[865,302,50,54]}
+{"kind":"textbox","id":"sh/ojqx4zah","slide":14,"text":"复检","textPreview":"复检","textChars":2,"textLines":1,"bbox":[915,175,230,58]}
+{"kind":"textbox","id":"sh/3ixwbu9c","slide":14,"text":"标两组对应点并查边界","textPreview":"标两组对应点并查边界","textChars":10,"textLines":1,"bbox":[915,250,230,170]}
+{"kind":"textbox","id":"sh/2hof29sr","slide":14,"text":"你的2.0必须回答：新规则怎样排除了原来的另一种解释？","textPreview":"你的2.0必须回答：新规则怎样排除了原来的另一种解释？","textChars":27,"textLines":1,"bbox":[170,495,940,62]}
+{"kind":"textbox","id":"sh/1gfe94r6","slide":14,"text":"不是“再试一次”，而是“据证据改规则”。","textPreview":"不是“再试一次”，而是“据证据改规则”。","textChars":20,"textLines":1,"bbox":[300,576,680,40]}
+{"kind":"notes","id":"nt/gkjoi7","slide":14,"text":"要求每组只完成一条最关键修订，控制时间。\n记录句式：偏差—原因—修改—再检验。\n建议用时：3分钟。"}
+{"kind":"slide","id":"sl/wy277o","slide":15,"title":"教材内迁移","textShapes":7}
+{"kind":"shape","id":"sh/5cb69sve","slide":15,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/i9knedcn","slide":15,"text":"教材内迁移","textPreview":"教材内迁移","textChars":5,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/3ato7id8","slide":15,"text":"回到教材新一行｜哪些条件保留，哪些必须改变？","textPreview":"回到教材新一行｜哪些条件保留，哪些必须改变？","textChars":22,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/sfm5k7u5","slide":15,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/dgv6dsva","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"shape","id":"sh/qdknixcz","slide":15,"bbox":[75,160,1130,245]}
+{"kind":"shape","id":"sh/retob2dk","slide":15,"bbox":[180,245,58.8,58.8]}
+{"kind":"shape","id":"sh/03mpo7u1","slide":15,"bbox":[198.9,263.9,21,21]}
+{"kind":"shape","id":"sh/14v6hcvm","slide":15,"bbox":[160.05,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/dgfuhs36","slide":15,"bbox":[220.95,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/sf6donml","slide":15,"bbox":[203.1,236.6,12.6,12.6]}
+{"kind":"shape","id":"sh/rexcfil0","slide":15,"bbox":[330,245,58.8,58.8]}
+{"kind":"shape","id":"sh/qdovmd4f","slide":15,"bbox":[348.9,263.9,21,21]}
+{"kind":"shape","id":"sh/14zuls32","slide":15,"bbox":[310.05,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/0jqdsnmh","slide":15,"bbox":[370.95,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/fixcj2lw","slide":15,"bbox":[353.1,295.4,12.6,12.6]}
+{"kind":"shape","id":"sh/ehovqx4b","slide":15,"bbox":[480,245,58.8,58.8]}
+{"kind":"shape","id":"sh/h8vu983y","slide":15,"bbox":[498.9,263.9,21,21]}
+{"kind":"shape","id":"sh/gnmtg3md","slide":15,"bbox":[460.05,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/8rqdw3u9","slide":15,"bbox":[520.95,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/9szup8bu","slide":15,"bbox":[503.1,236.6,12.6,12.6]}
+{"kind":"shape","id":"sh/mpovutc3","slide":15,"bbox":[630,245,58.8,58.8]}
+{"kind":"shape","id":"sh/7qhcnyto","slide":15,"bbox":[648.9,263.9,21,21]}
+{"kind":"shape","id":"sh/wvqd0nu5","slide":15,"bbox":[610.05,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/hwzut8bq","slide":15,"bbox":[670.95,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/ut8vydcz","slide":15,"bbox":[653.1,295.4,12.6,12.6]}
+{"kind":"shape","id":"sh/vuhcritk","slide":15,"bbox":[780,245,58.8,58.8]}
+{"kind":"shape","id":"sh/4jad4nuh","slide":15,"bbox":[798.9,263.9,21,21]}
+{"kind":"shape","id":"sh/5kjuxsbm","slide":15,"bbox":[760.05,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/felg3md4","slide":15,"bbox":[820.95,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/edcfuhwj","slide":15,"bbox":[803.1,236.6,12.6,12.6]}
+{"kind":"shape","id":"sh/1gny5wvu","slide":15,"bbox":[930,245,58.8,58.8]}
+{"kind":"shape","id":"sh/gfuxwrep","slide":15,"bbox":[948.9,263.9,21,21]}
+{"kind":"shape","id":"sh/rqlgzmds","slide":15,"bbox":[910.05,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/6pcfqhw7","slide":15,"bbox":[970.95,260.75,39.9,23.1]}
+{"kind":"shape","id":"sh/ts3y1cvy","slide":15,"bbox":[953.1,295.4,12.6,12.6]}
+{"kind":"textbox","id":"sh/sruxs7ed","slide":15,"text":"先关于竖直边界作轴对称，再向右平移一个单位宽度","textPreview":"先关于竖直边界作轴对称，再向右平移一个单位宽度","textChars":23,"textLines":1,"bbox":[160,435,960,55]}
+{"kind":"textbox","id":"sh/bm5gb6dc","slide":15,"text":"保留？\nG　D　V","textPreview":"保留？ | G　D　V","textChars":9,"textLines":2,"bbox":[150,525,360,100]}
+{"kind":"textbox","id":"sh/qlwf21wr","slide":15,"text":"改变？\nT　λ　以及运动顺序","textPreview":"改变？ | T　λ　以及运动顺序","textChars":14,"textLines":2,"bbox":[770,525,360,100]}
+{"kind":"textbox","id":"sh/ytcjq5sv","slide":15,"text":"个人完成，2分钟","textPreview":"个人完成，2分钟","textChars":8,"textLines":1,"bbox":[540,552,200,48]}
+{"kind":"notes","id":"nt/wy277o","slide":15,"text":"迁移仍使用教材表1另一行，不另设新项目。\n学生个人完成，防止小组作品遮蔽个体差异。\n建议用时：2分钟。\n[Sources]\n- 教材活动1表1，用户提供课件《综合与实践-从传统连续纹样到现代镶嵌图案》第10—12页\n[/Sources]"}
+{"kind":"slide","id":"sl/gimm9g","slide":16,"title":"收束","textShapes":17}
+{"kind":"shape","id":"sh/8zad0vud","slide":16,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/7y1c7qts","slide":16,"text":"收束","textPreview":"收束","textChars":2,"textLines":1,"bbox":[56,30,390,24]}
+{"kind":"textbox","id":"sh/6xsvylc7","slide":16,"text":"出门条｜今天留下三条个人证据","textPreview":"出门条｜今天留下三条个人证据","textChars":14,"textLines":1,"bbox":[56,56,1085,64]}
+{"kind":"shape","id":"sh/lwju50bm","slide":16,"bbox":[56,125,1168,2]}
+{"kind":"textbox","id":"sh/kvatwvu1","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1170,35,50,28]}
+{"kind":"textbox","id":"sh/ju1c3qtg","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[78,170,68,68]}
+{"kind":"textbox","id":"sh/ytsbulcb","slide":16,"text":"写出一条可执行规则\n\n至少包含 G、T、λ、D","textPreview":"写出一条可执行规则 |  | 至少包含 G、T、λ、D","textChars":23,"textLines":3,"bbox":[78,255,350,210]}
+{"kind":"textbox","id":"sh/xszu1gbq","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[468,170,68,68]}
+{"kind":"textbox","id":"sh/w7qtsbu5","slide":16,"text":"写出一条验收条件 V\n\n说明准备用什么证据检查","textPreview":"写出一条验收条件 V |  | 说明准备用什么证据检查","textChars":23,"textLines":3,"bbox":[468,255,350,210]}
+{"kind":"textbox","id":"sh/e98bi503","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[858,170,68,68]}
+{"kind":"textbox","id":"sh/zahcraho","slide":16,"text":"若同伴与AI不同\n\n你首先检查什么？为什么？","textPreview":"若同伴与AI不同 |  | 你首先检查什么？为什么？","textChars":22,"textLines":3,"bbox":[858,255,350,210]}
+{"kind":"textbox","id":"sh/0batkfy9","slide":16,"text":"观察现实纹样","textPreview":"观察现实纹样","textChars":6,"textLines":1,"bbox":[95,545,250,45]}
+{"kind":"textbox","id":"sh/1cjutkzu","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[345,545,65,45]}
+{"kind":"textbox","id":"sh/q58be507","slide":16,"text":"表达生成规则","textPreview":"表达生成规则","textChars":6,"textLines":1,"bbox":[410,545,250,45]}
+{"kind":"textbox","id":"sh/r6hsnahs","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[660,545,65,45]}
+{"kind":"textbox","id":"sh/c7qtgvix","slide":16,"text":"检验并修正","textPreview":"检验并修正","textChars":5,"textLines":1,"bbox":[725,545,250,45]}
+{"kind":"textbox","id":"sh/d8zup0zi","slide":16,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[975,545,65,45]}
+{"kind":"textbox","id":"sh/2hobal0v","slide":16,"text":"迁移到新图样","textPreview":"迁移到新图样","textChars":6,"textLines":1,"bbox":[1035,545,190,45]}
+{"kind":"textbox","id":"sh/3ixsjqhg","slide":16,"text":"AI负责执行；数学证据负责判断。","textPreview":"AI负责执行；数学证据负责判断。","textChars":16,"textLines":1,"bbox":[320,625,640,42]}
+{"kind":"notes","id":"nt/gimm9g","slide":16,"text":"学生个人完成后收回，作为论文中应用意识的个体证据。\n结束语：AI只负责把规则的后果显示出来，最终判断仍属于数学。\n建议用时：2分钟。\n[Sources]\n- 中华人民共和国教育部《义务教育数学课程标准（2022年版）》\n[/Sources]"}

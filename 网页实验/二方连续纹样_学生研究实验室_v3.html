@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>纹样规则研究室｜学生实验版</title>
+  <style>
+    :root{--ink:#16213e;--muted:#667085;--line:#d9e2f1;--blue:#3157d5;--blue2:#eef3ff;--green:#167a5b;--green2:#eaf8f2;--orange:#b85d14;--orange2:#fff4e8;--red:#b33a3a;--red2:#fff0f0;--paper:#fff;--bg:#f5f7fb;--shadow:0 12px 34px rgba(31,51,92,.10)}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.55}button,input,textarea,select{font:inherit}.app{min-height:100vh}.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.topin{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;gap:18px}.brand{min-width:245px}.brand b{display:block;font-size:19px}.brand span{font-size:12px;color:var(--muted)}.steps{display:flex;gap:8px;flex:1}.step{border:1px solid var(--line);background:#fff;color:#526070;border-radius:12px;padding:9px 12px;display:flex;align-items:center;gap:8px;cursor:pointer;min-width:0}.step strong{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#edf0f6;color:#667085}.step span{white-space:nowrap}.step.on{border-color:var(--blue);background:var(--blue2);color:#173aab}.step.on strong,.step.done strong{background:var(--blue);color:white}.progress{height:4px;background:#e9edf5}.progress i{display:block;height:100%;background:linear-gradient(90deg,#3157d5,#21a179);transition:.3s}.main{max-width:1160px;margin:26px auto 60px;padding:0 22px}.screen{display:none}.screen.on{display:block}.hero{background:linear-gradient(135deg,#173da3,#3157d5 55%,#237f78);color:white;border-radius:22px;padding:27px 30px;box-shadow:var(--shadow);margin-bottom:18px}.hero small{opacity:.82}.hero h1{font-size:28px;margin:4px 0 7px}.hero p{margin:0;max-width:820px;font-size:16px}.layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.72fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 4px 16px rgba(31,51,92,.05)}.card h2,.card h3{margin:0 0 8px}.card h2{font-size:21px}.card h3{font-size:16px}.sub{color:var(--muted);font-size:14px;margin:0 0 14px}.task{border-left:5px solid var(--blue);background:var(--blue2);padding:12px 15px;border-radius:4px 12px 12px 4px;margin-bottom:16px}.motifs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.motif{border:2px solid var(--line);background:white;border-radius:15px;padding:10px;cursor:pointer;text-align:left}.motif:hover{border-color:#9fb2ee}.motif.on{border-color:var(--blue);background:var(--blue2)}.motif svg{width:100%;height:105px;display:block;background:#fbfcff;border-radius:10px}.motif b{display:block;margin-top:6px}.motif small{color:var(--muted)}.field{margin:14px 0}.field label{display:block;font-weight:700;margin-bottom:6px}.field textarea,.field input,.field select,textarea,input,select{width:100%;border:1.5px solid #cbd5e5;border-radius:11px;padding:11px 12px;background:white;color:var(--ink)}textarea{min-height:112px;resize:vertical}input:focus,textarea:focus,select:focus{outline:3px solid rgba(49,87,213,.13);border-color:var(--blue)}.choices{display:flex;flex-wrap:wrap;gap:8px}.choice{border:1.5px solid var(--line);background:white;border-radius:999px;padding:8px 13px;cursor:pointer}.choice.on{border-color:var(--blue);background:var(--blue2);color:#173aab;font-weight:700}.btn{border:0;border-radius:11px;padding:10px 16px;cursor:pointer;font-weight:700}.btn.primary{background:var(--blue);color:white}.btn.green{background:var(--green);color:white}.btn.light{background:#edf1f7;color:var(--ink)}.btn.orange{background:var(--orange2);color:var(--orange);border:1px solid #f2cfaa}.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}.actions .right{margin-left:auto}.agent{background:#f8faff;border:1px solid #cad7fa;border-radius:18px;padding:15px}.agenthead{display:flex;align-items:center;gap:10px;margin-bottom:10px}.avatar{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#3157d5,#21a179);display:grid;place-items:center;color:white;font-size:20px}.bubble{background:white;border:1px solid var(--line);border-radius:4px 13px 13px 13px;padding:12px;min-height:80px}.bubble ul{padding-left:20px;margin:7px 0}.note{font-size:13px;color:var(--muted);margin-top:9px}.good{background:var(--green2);border:1px solid #a8dfcb;color:#116148;border-radius:12px;padding:11px 13px}.warn{background:var(--orange2);border:1px solid #f0c99e;color:#8d490f;border-radius:12px;padding:11px 13px}.bad{background:var(--red2);border:1px solid #efb9b9;color:#8d2d2d;border-radius:12px;padding:11px 13px}.stage{border:1px solid var(--line);border-radius:15px;background:#fff;overflow:hidden}.stage svg{width:100%;height:auto;display:block}.paramgrid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:10px}.experiment-report{margin-top:12px}.twoview{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-stage{border:1px solid var(--line);border-radius:13px;overflow:hidden}.mini-stage b{display:block;padding:7px 10px;background:#f3f6fb}.mini-stage svg{width:100%;display:block}.evidence{display:grid;gap:11px}.ev{border:1.5px solid var(--line);border-radius:14px;padding:14px}.ev.ok{border-color:#7bc9ae;background:var(--green2)}.ev h3{display:flex;align-items:center;gap:8px}.ev h3 span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#eef2f8}.result{margin-top:12px}.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}.version{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fbfcff;white-space:pre-wrap;min-height:118px}.diffchips{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.chip{font-size:13px;border-radius:999px;padding:5px 9px;background:#edf1f7}.chip.ok{background:var(--green2);color:var(--green)}details{border:1px solid var(--line);border-radius:13px;padding:11px 13px;background:#fbfcff}summary{font-weight:700;cursor:pointer}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#172033;color:white;padding:10px 17px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:50}.toast.show{opacity:1}.finish{border:2px solid #8bd0b8;background:linear-gradient(135deg,#f3fff9,#eef4ff);text-align:center;padding:25px;border-radius:18px}.finish .big{font-size:38px}.tiny{font-size:12px;color:var(--muted)}
+    @media(max-width:850px){.topin{align-items:flex-start;flex-direction:column}.brand{min-width:0}.steps{width:100%;overflow:auto}.step span{display:none}.step{padding:7px}.layout,.compare{grid-template-columns:1fr}.paramgrid{grid-template-columns:1fr}.main{padding:0 13px;margin-top:14px}.hero{padding:22px 20px}.hero h1{font-size:23px}.motifs{grid-template-columns:1fr 1fr}.twoview{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="topin">
+      <div class="brand"><b>纹样规则研究室</b><span>让别人和AI都能照着你的规则做</span></div>
+      <nav class="steps" aria-label="学习步骤">
+        <button class="step on" data-step="1" onclick="go(1)"><strong>1</strong><span>找一找</span></button>
+        <button class="step" data-step="2" onclick="go(2)"><strong>2</strong><span>说一说</span></button>
+        <button class="step" data-step="3" onclick="go(3)"><strong>3</strong><span>动一动</span></button>
+        <button class="step" data-step="4" onclick="go(4)"><strong>4</strong><span>验一验</span></button>
+        <button class="step" data-step="5" onclick="go(5)"><strong>5</strong><span>改一改</span></button>
+      </nav>
+    </div>
+    <div class="progress"><i id="progress" style="width:8%"></i></div>
+  </header>
+
+  <main class="main">
+    <section class="screen on" data-screen="1">
+      <div class="hero"><small>第1步 · 约5分钟</small><h1>先找出：究竟是什么在重复？</h1><p>今天不比谁画得漂亮。我们要发现纹样背后的运动方法，并把它说到别人无法误解。</p></div>
+      <div class="layout">
+        <div class="card">
+          <div class="task"><b>你的任务：</b>任选一条纹样，观察其中不断重复的“一个单位”。</div>
+          <div class="motifs" id="motifList"></div>
+        </div>
+        <aside class="card">
+          <h2>我看见了什么？</h2><p class="sub">没有唯一的圈法，但你的选择必须能解释整条纹样。</p>
+          <div class="field"><label for="unitName">我把什么看作一个基本图案？</label><input id="unitName" placeholder="例如：一枝带两片叶子的图案" oninput="save()"></div>
+          <div class="field"><label>纹样向哪里延伸？</label><div class="choices" id="dirChoices"><button class="choice" data-value="向右">向右</button><button class="choice" data-value="向左和向右">向左和向右</button></div></div>
+          <div class="actions"><button class="btn primary right" onclick="finishObserve()">我找到了 →</button></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="2">
+      <div class="hero"><small>第2步 · 约6分钟</small><h1>不用数学术语也可以，先把方法说出来</h1><p>想象同伴看不到原图。只读你的一句话，他能画出同样的纹样吗？</p></div>
+      <div class="layout">
+        <div class="card">
+          <h2>我的第一版规则</h2><p class="sub">先独立写。研究伙伴只检查是否说清楚，不替你写答案。</p>
+          <div id="selectedMotif"></div>
+          <div class="field"><label for="rule1">请写：怎样由一个基本图案生成整条纹样？</label><textarea id="rule1" placeholder="例如：把这枝叶子不断向右移动……" oninput="save();clearAgent()"></textarea></div>
+          <div class="actions"><button class="btn green" onclick="askPartner('rule1')">交给研究伙伴检查</button><button class="btn light" onclick="showStarter()">我不知道怎样开头</button></div>
+        </div>
+        <aside class="agent">
+          <div class="agenthead"><div class="avatar">研</div><div><b>规则研究伙伴</b><div class="tiny">我只按你写出的条件理解，不帮你猜</div></div></div>
+          <div class="bubble" id="agent2">写完第一版规则后，请我检查。我会告诉你：哪些地方可能产生两种画法。</div>
+          <div class="actions"><button class="btn primary right" id="toExperiment" onclick="go(3)">带着问题去做实验 →</button></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="3">
+      <div class="hero"><small>第3步 · 约11分钟</small><h1>动一动：同一句话会不会生成不同结果？</h1><p>改变运动方式、移动距离和重复次数，观察结果怎样变化。程序只执行你的选择，不替你判断。</p></div>
+      <div class="card" style="margin-bottom:18px">
+        <h2>先看“含混规则”可能带来的两种解释</h2><p class="sub" id="ambiguityText">如果规则没有说清楚，两个执行者可能各自补充不同条件。</p>
+        <div class="twoview" id="ambiguityViews"></div>
+      </div>
+      <div class="layout">
+        <div class="card">
+          <h2>我的运动实验台</h2>
+          <div class="paramgrid">
+            <div class="field"><label for="motion">怎样运动？</label><select id="motion" onchange="runExperiment()"><option value="move">只向右平移</option><option value="reflect">左右翻转后再平移</option><option value="rotate">旋转180°后再平移</option></select></div>
+            <div class="field"><label for="distance">每次移动几格？</label><select id="distance" onchange="runExperiment()"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option></select></div>
+            <div class="field"><label for="count">一共出现几个？</label><select id="count" onchange="runExperiment()"><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option></select></div>
+          </div>
+          <div class="stage" id="experimentStage"></div>
+          <div class="experiment-report" id="experimentReport"></div>
+          <div class="actions"><button class="btn orange" onclick="trySurprise()">换一种条件试试看</button><button class="btn primary right" onclick="finishExperiment()">选定一种解释，去检验 →</button></div>
+        </div>
+        <aside class="card">
+          <h2>和真实AI比一比（选做）</h2><p class="sub">本工具不冒充生成式AI。若课堂使用学校允许的AI，可把原规则原样交给它。</p>
+          <button class="btn light" onclick="copyAIPrompt()">复制“只执行、不猜测”提示词</button>
+          <div class="field"><label for="aiReply">粘贴AI的原始回复</label><textarea id="aiReply" placeholder="AI若说信息不足，也请完整保留" oninput="save()"></textarea></div>
+          <div class="field"><label for="aiFinding">AI的结果说明了什么？</label><select id="aiFinding" onchange="save()"><option value="">请选择</option><option>AI主动指出规则信息不足</option><option>AI自行补充了我没有写的条件</option><option>AI违反了已经写明的条件</option><option>AI严格执行且结果可以检验</option></select></div>
+          <p class="note">AI给出图案不等于正确。下一步仍要用数学证据检查。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="4">
+      <div class="hero"><small>第4步 · 约10分钟</small><h1>验一验：不要只说“看起来差不多”</h1><p>用三个问题检查结果：对应位置怎样变化？图形什么没变？相邻处是否连续？</p></div>
+      <div class="layout">
+        <div class="card">
+          <h2>带数学标记的实验结果</h2><div class="stage" id="evidenceStage"></div>
+          <div class="actions"><button class="btn light" onclick="toggleLayer('grid')">显示/隐藏网格</button><button class="btn light" onclick="toggleLayer('bounds')">显示/隐藏单元边界</button><button class="btn light" onclick="toggleLayer('points')">显示/隐藏对应位置</button></div>
+        </div>
+        <div class="card">
+          <h2>三项证据</h2><div class="evidence">
+            <div class="ev" id="evbox1"><h3><span>1</span>位置关系</h3><label for="ev1">相邻单元中心C、C′之间怎样变化？</label><select id="ev1"><option value="">请选择</option><option value="same">方向相同，距离都等于设定值</option><option value="random">方向和距离没有规律</option><option value="zero">位置没有变化</option></select></div>
+            <div class="ev" id="evbox2"><h3><span>2</span>运动中的不变量</h3><label for="ev2">运动前后，基本图案的什么保持不变？</label><select id="ev2"><option value="">请选择</option><option value="color">只有颜色不变</option><option value="size">形状和大小不变，朝向按规则变化</option><option value="all">位置和朝向永远都不变</option></select></div>
+            <div class="ev" id="evbox3"><h3><span>3</span>相邻处的连续性</h3><label for="ev3">按当前距离排列，单元边界怎样？</label><select id="ev3"><option value="">请选择</option><option value="overlap">发生重叠</option><option value="touch">恰好衔接</option><option value="gap">出现空隙</option></select></div>
+          </div>
+          <div class="actions"><button class="btn green" onclick="checkEvidence()">检查我的证据</button></div><div class="result" id="evidenceResult"></div>
+          <div class="actions"><button class="btn primary right" id="toRevise" onclick="go(5)" disabled>用证据修改规则 →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="5">
+      <div class="hero"><small>第5步 · 约8分钟</small><h1>改一改：让规则经得起别人执行</h1><p>把实验发现写回规则，再换一个纹样判断哪些条件可以沿用。</p></div>
+      <div class="card" style="margin-bottom:18px">
+        <div class="compare"><div><h3>我的第一版</h3><div class="version" id="v1"></div></div><div><h3>我的修订版</h3><textarea id="rule2" placeholder="把基本图案、运动方法、方向与距离、重复方式和检验办法写清楚" oninput="save();analyzeRevision()"></textarea></div></div>
+        <div class="diffchips" id="revisionChips"></div>
+        <div class="actions"><button class="btn green" onclick="askPartner('rule2')">请研究伙伴再检查一次</button></div>
+        <div class="agent" style="margin-top:12px"><div class="agenthead"><div class="avatar">研</div><b>最后检查</b></div><div class="bubble" id="agent5">写出修订版后，我会检查主要条件是否齐全。</div></div>
+      </div>
+      <div class="layout">
+        <div class="card">
+          <h2>换一个纹样，还能用吗？</h2><p class="sub">迁移不是照抄。请指出哪些条件不变，哪些必须重新确定。</p><div id="transferMotif"></div>
+          <div class="field"><label for="transfer">如果换成这个纹样，我会保留什么、改变什么？</label><textarea id="transfer" placeholder="我仍然需要说明……；但基本图案/运动方法/距离需要……" oninput="save();updateFinish()"></textarea></div>
+        </div>
+        <aside class="card">
+          <div class="finish" id="finishBox"><div class="big">🔎</div><h2>还差最后一点</h2><p>完成修订规则和迁移说明，你就完成了一次真正的数学规则研究。</p></div>
+          <div class="actions"><button class="btn primary" onclick="downloadReport()">下载我的实验记录</button><button class="btn light" onclick="printReport()">打印</button><button class="btn light" onclick="resetLab()">重新实验</button></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const KEY='frieze-student-lab-v3';
+const defaults={step:1,motif:'leaf',unitName:'',direction:'',rule1:'',motion:'move',distance:4,count:5,aiReply:'',aiFinding:'',rule2:'',transfer:'',done:{observe:false,experiment:false,evidence:false},layers:{grid:true,bounds:true,points:true},checks:0,startedAt:new Date().toISOString()};
+let S=load();
+const motifs={
+ leaf:{name:'叶蔓纹',hint:'一枝一叶怎样接着出现？',color:'#2a8b62'},
+ pair:{name:'对叶纹',hint:'相邻叶片的朝向相同吗？',color:'#3157d5'},
+ bird:{name:'回首鸟纹',hint:'相邻小鸟的方向发生了什么？',color:'#b85d14'},
+ diamond:{name:'菱花纹',hint:'哪个最小部分可以不断复制？',color:'#8a4db1'}
+};
+function load(){try{return Object.assign({},defaults,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){return structuredClone(defaults)}}
+function save(){['unitName','rule1','aiReply','aiFinding','rule2','transfer'].forEach(id=>{if($(id))S[id]=$(id).value});S.motion=$('motion')?.value||S.motion;S.distance=+$('distance')?.value||S.distance;S.count=+$('count')?.value||S.count;localStorage.setItem(KEY,JSON.stringify(S));updateProgress()}
+function esc(t){return String(t||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1800)}
+function go(n){S.step=n;document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('on',+x.dataset.screen===n));document.querySelectorAll('.step').forEach(x=>x.classList.toggle('on',+x.dataset.step===n));if(n===2)renderSelected();if(n===3){renderAmbiguity();runExperiment()}if(n===4)renderEvidence();if(n===5)renderRevision();save();scrollTo({top:0,behavior:'smooth'})}
+function updateProgress(){let score=8+(S.done.observe?18:0)+(S.rule1?.trim().length>7?16:0)+(S.done.experiment?20:0)+(S.done.evidence?22:0)+(S.rule2?.trim().length>20?10:0)+(S.transfer?.trim().length>12?6:0);$('progress').style.width=Math.min(score,100)+'%';document.querySelectorAll('.step').forEach(x=>x.classList.toggle('done',+x.dataset.step<S.step))}
+function gridLines(){let a='';for(let x=10;x<760;x+=20)a+=`<line x1="${x}" y1="20" x2="${x}" y2="180"/>`;for(let y=20;y<=180;y+=20)a+=`<line x1="0" y1="${y}" x2="760" y2="${y}"/>`;return `<g stroke="#e7ebf3" stroke-width="1">${a}</g>`}
+function unitShape(kind,x,y,transform=''){
+ let c=motifs[kind].color,shape='';
+ if(kind==='leaf')shape=`<path d="M10 48 Q38 12 70 42" fill="none" stroke="${c}" stroke-width="5" stroke-linecap="round"/><path d="M32 29 Q14 8 15 36 Q25 41 32 29" fill="${c}" opacity=".78"/><path d="M51 29 Q70 8 67 39 Q57 43 51 29" fill="${c}" opacity=".55"/>`;
+ if(kind==='pair')shape=`<path d="M40 12 L40 61" stroke="${c}" stroke-width="4"/><path d="M38 31 Q10 5 12 38 Q24 48 38 31" fill="${c}" opacity=".8"/><path d="M42 43 Q72 17 69 53 Q55 61 42 43" fill="${c}" opacity=".55"/>`;
+ if(kind==='bird')shape=`<path d="M12 45 Q30 15 51 36 Q65 27 72 16 L69 43 Q53 65 28 57 Z" fill="${c}" opacity=".78"/><circle cx="57" cy="35" r="3" fill="#172033"/><path d="M13 44 L3 35 L14 34" fill="${c}"/>`;
+ if(kind==='diamond')shape=`<path d="M40 7 L73 36 L40 65 L7 36 Z" fill="${c}" opacity=".18" stroke="${c}" stroke-width="4"/><path d="M40 17 L61 36 L40 55 L19 36 Z" fill="none" stroke="${c}" stroke-width="3"/>`;
+ return `<g transform="translate(${x} ${y}) ${transform}">${shape}</g>`
+}
+function patternSVG(opts={}){let kind=opts.kind||S.motif,d=opts.distance||S.distance,n=opts.count||S.count,mode=opts.motion||S.motion,small=!!opts.small,layers=opts.layers||{grid:true,bounds:true,points:false};let w=small?430:760,scale=small?.56:1,start=small?18:45,top=small?35:62,parts=layers.grid?gridLines():'';for(let i=0;i<n;i++){let x=start+i*d*20;if(x+80>w/scale)break;let tf='';if(mode==='reflect'&&i%2)tf='translate(80 0) scale(-1 1)';if(mode==='rotate'&&i%2)tf='translate(80 70) rotate(180)';if(layers.bounds)parts+=`<rect x="${x}" y="${top}" width="80" height="70" fill="none" stroke="#cf4d4d" stroke-width="1.5" stroke-dasharray="6 4"/>`;parts+=unitShape(kind,x,top,tf);if(layers.points){let cx=x+40;parts+=`<circle cx="${cx}" cy="${top+78}" r="4" fill="#3157d5"/><text x="${cx}" y="${top+96}" text-anchor="middle" font-size="13" fill="#173aab">C${i?"′".repeat(Math.min(i,2)):''}</text>`}}
+ if(layers.points&&n>1){let x1=start+40,x2=start+d*20+40;parts+=`<path d="M${x1} ${top+78} L${x2-7} ${top+78}" stroke="#3157d5" stroke-width="2" marker-end="url(#arr)"/><text x="${(x1+x2)/2}" y="${top+72}" text-anchor="middle" font-size="13" fill="#173aab">${d}格</text>`}
+ let defs='<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#3157d5"/></marker></defs>';return `<svg viewBox="0 0 ${w} ${small?135:210}" aria-label="连续纹样实验图">${defs}<g transform="scale(${scale})">${parts}</g></svg>`}
+function renderMotifs(){let el=$('motifList');el.innerHTML=Object.entries(motifs).map(([k,m])=>`<button class="motif ${S.motif===k?'on':''}" onclick="chooseMotif('${k}')">${patternSVG({kind:k,distance:4,count:5,motion:k==='pair'?'reflect':k==='bird'?'rotate':'move',small:true,layers:{grid:false,bounds:false,points:false}})}<b>${m.name}</b><small>${m.hint}</small></button>`).join('')}
+function chooseMotif(k){S.motif=k;renderMotifs();save();toast('已选择'+motifs[k].name)}
+document.querySelectorAll('#dirChoices .choice').forEach(b=>b.onclick=()=>{S.direction=b.dataset.value;document.querySelectorAll('#dirChoices .choice').forEach(x=>x.classList.toggle('on',x===b));save()});
+function finishObserve(){S.unitName=$('unitName').value.trim();if(S.unitName.length<3||!S.direction){toast('请先写出基本图案，并选择延伸方向');return}S.done.observe=true;save();go(2)}
+function renderSelected(){$('selectedMotif').innerHTML=`<div class="stage">${patternSVG({kind:S.motif,distance:4,count:6,motion:S.motif==='pair'?'reflect':S.motif==='bird'?'rotate':'move',layers:{grid:false,bounds:true,points:false}})}</div><p class="note">你选择了：${motifs[S.motif].name}；基本图案：${esc(S.unitName||'尚未填写')}</p>`}
+function features(text){let t=text||'',num=t.match(/(\d+(?:\.\d+)?)\s*(格|厘米|cm|个单位)/i),cnt=t.match(/(\d+)\s*(次|个|组|遍)/);return {unit:/(基本图案|单位图案|叶|鸟|花|菱|图形|图案)/.test(t),motion:/(平移|移动|旋转|转动|轴对称|翻转|反射)/.test(t),direction:/(向右|向左|水平|沿着|横向)/.test(t),distance:!!num,count:!!cnt||/(不断|连续|重复|无限)/.test(t),invariant:/(形状|大小|方向|朝向|不变|保持)/.test(t),distanceValue:num?+num[1]:null,countValue:cnt?+cnt[1]:null,mode:/轴对称|翻转|反射/.test(t)?'reflect':/旋转|转动/.test(t)?'rotate':'move'} }
+const labels={unit:'重复的基本图案是什么',motion:'基本图案做什么运动',direction:'沿哪个方向运动',distance:'每次运动多远',count:'重复到什么时候',invariant:'运动时哪些性质保持不变'};
+function analyze(text){let f=features(text),missing=Object.keys(labels).filter(k=>!f[k]);return {f,missing,complete:missing.length===0}}
+function askPartner(id){let text=$(id).value.trim(),box=id==='rule1'?$('agent2'):$('agent5');if(text.length<6){box.innerHTML='我还没有读到一条完整规则。可以先从“以……为一个基本图案”开始。';return}let a=analyze(text);if(a.complete){box.innerHTML=`<div class="good"><b>我已经能找到主要条件。</b><br>现在不要急着宣布正确，请到实验台执行，再用数学证据检验。</div>`;if(id==='rule2')updateFinish()}else{box.innerHTML=`<b>如果我完全不猜，还有 ${a.missing.length} 处不确定：</b><ul>${a.missing.map(k=>`<li>${labels[k]}？</li>`).join('')}</ul><span class="tiny">先别照抄完整句子。带着这些问题去试验，看看哪一项会改变结果。</span>`}save()}
+function clearAgent(){if($('agent2'))$('agent2').textContent='规则已改变。再次交给我，我会重新检查可能的歧义。'}
+function showStarter(){$('agent2').innerHTML='<div class="warn">只给一个句子开头：<b>“以我圈出的____为一个基本图案，把它……”</b><br>后面的运动方法请根据图案自己判断。</div>'}
+function ambiguityOptions(){let a=analyze(S.rule1),base={kind:S.motif,distance:4,count:5,motion:S.motif==='pair'?'reflect':S.motif==='bird'?'rotate':'move',small:true,layers:{grid:false,bounds:true,points:false}},A={...base},B={...base},why='';if(!a.f.motion){A.motion='move';B.motion='reflect';why='你没有说清运动方法：一人理解为平移，另一人理解为翻转后平移。'}else if(!a.f.distance){A.motion=a.f.mode;B.motion=a.f.mode;A.distance=3;B.distance=5;why='你没有说清每次移动多远：一人取3格，另一人取5格。'}else if(!a.f.count){A.motion=B.motion=a.f.mode;A.distance=B.distance=a.f.distanceValue||4;A.count=3;B.count=6;why='你没有说清重复范围：一人画3个，另一人继续画6个。'}else{A.motion=B.motion=a.f.mode;A.distance=B.distance=a.f.distanceValue||4;B.motion=B.motion==='move'?'reflect':'move';why='规则看起来较完整。这里故意让执行者B违反一项条件，供你比较“规则含混”和“执行错误”。'}return {A,B,why}}
+function renderAmbiguity(){let o=ambiguityOptions();$('ambiguityText').textContent=o.why;$('ambiguityViews').innerHTML=`<div class="mini-stage"><b>执行者A的理解</b>${patternSVG(o.A)}</div><div class="mini-stage"><b>执行者B的理解</b>${patternSVG(o.B)}</div>`;let f=features(S.rule1);if(f.distanceValue&&f.distanceValue>=2&&f.distanceValue<=7)S.distance=f.distanceValue;if(f.countValue&&f.countValue>=3&&f.countValue<=7)S.count=f.countValue;S.motion=f.mode;$('motion').value=S.motion;$('distance').value=String(S.distance);$('count').value=String(S.count)}
+function statusForDistance(d){return d<4?{cls:'bad',text:`每次移动${d}格，小于一个单位的4格宽，单元发生重叠。`}:d>4?{cls:'warn',text:`每次移动${d}格，大于一个单位的4格宽，相邻单元之间出现空隙。`}:{cls:'good',text:'每次移动4格，与单位宽度相等，相邻单元边界恰好衔接。'}}
+function runExperiment(){S.motion=$('motion').value;S.distance=+$('distance').value;S.count=+$('count').value;$('experimentStage').innerHTML=patternSVG({layers:{grid:true,bounds:true,points:false}});let st=statusForDistance(S.distance),m=S.motion==='move'?'平移':S.motion==='reflect'?'翻转后平移':'旋转180°后平移';$('experimentReport').innerHTML=`<div class="${st.cls}"><b>当前解释：</b>${m}；每次${S.distance}格；共${S.count}个。<br>${st.text}</div>`;save()}
+function trySurprise(){let cases=[['move',3,6],['reflect',4,5],['rotate',5,5]],x=cases[Math.floor(Math.random()*cases.length)];$('motion').value=x[0];$('distance').value=x[1];$('count').value=x[2];runExperiment()}
+function finishExperiment(){S.done.experiment=true;save();go(4)}
+function copyAIPrompt(){let prompt=`你是规则执行者，不是设计者。请严格根据下面的学生规则理解二方连续纹样，不自行补充运动方式、方向、距离、次数或图形变化。如果条件不足，请逐项指出；如果存在多种解释，请分别说明，不要猜测唯一答案。学生规则：\n${S.rule1||'〔尚未填写〕'}`;navigator.clipboard?.writeText(prompt).then(()=>toast('提示词已复制')).catch(()=>window.prompt('请复制下面的提示词',prompt))}
+function renderEvidence(){$('evidenceStage').innerHTML=patternSVG({layers:S.layers});$('ev1').value='';$('ev2').value='';$('ev3').value='';$('evidenceResult').innerHTML='';$('toRevise').disabled=!S.done.evidence}
+function toggleLayer(k){S.layers[k]=!S.layers[k];renderEvidence();save()}
+function checkEvidence(){let expected=S.distance<4?'overlap':S.distance>4?'gap':'touch',vals=[$('ev1').value,$('ev2').value,$('ev3').value],ok=[vals[0]==='same',vals[1]==='size',vals[2]===expected];ok.forEach((v,i)=>$('evbox'+(i+1)).classList.toggle('ok',v));S.checks++;if(ok.every(Boolean)){S.done.evidence=true;$('evidenceResult').innerHTML='<div class="good"><b>三项证据成立。</b>你已经从“看起来像”走向了“说得出为什么”。</div>';$('toRevise').disabled=false}else{$('evidenceResult').innerHTML=`<div class="warn">还有证据需要调整：${ok.map((v,i)=>v?'':`第${i+1}项`).filter(Boolean).join('、')}。请回到图中的网格、中心点和红色边界重新观察。</div>`}save()}
+function renderRevision(){$('v1').textContent=S.rule1||'尚未写第一版规则';$('rule2').value=S.rule2||'';let next=Object.keys(motifs).find(k=>k!==S.motif);$('transferMotif').innerHTML=`<div class="stage">${patternSVG({kind:next,distance:4,count:6,motion:next==='pair'?'reflect':next==='bird'?'rotate':'move',layers:{grid:false,bounds:true,points:false}})}</div><p class="note">新任务：${motifs[next].name}</p>`;analyzeRevision();updateFinish()}
+function analyzeRevision(){S.rule2=$('rule2').value;let a=analyze(S.rule2);$('revisionChips').innerHTML=Object.keys(labels).map(k=>`<span class="chip ${a.f[k]?'ok':''}">${a.f[k]?'✓':'○'} ${labels[k]}</span>`).join('');save()}
+function updateFinish(){let complete=analyze(S.rule2||'').complete&&(S.transfer||'').trim().length>=12;if(complete)$('finishBox').innerHTML='<div class="big">✓</div><h2>研究完成</h2><p>你经历了观察、表达、执行、检验和修订。结论不是AI告诉你的，而是证据支持的。</p>';else $('finishBox').innerHTML='<div class="big">🔎</div><h2>还差最后一点</h2><p>完成修订规则和迁移说明，你就完成了一次真正的数学规则研究。</p>'}
+function reportHTML(){let f=features(S.rule2),motion=S.motion==='move'?'平移':S.motion==='reflect'?'翻转后平移':'旋转180°后平移';return `<!doctype html><meta charset="utf-8"><title>我的纹样规则实验记录</title><style>body{font-family:PingFang SC,Microsoft YaHei,sans-serif;max-width:850px;margin:30px auto;padding:0 20px;line-height:1.7;color:#172033}h1{border-bottom:4px solid #3157d5;padding-bottom:10px}h2{color:#244bbf;margin-top:25px}.box{border:1px solid #ccd6e5;border-radius:10px;padding:12px;white-space:pre-wrap}.tag{display:inline-block;margin:3px;padding:3px 8px;border-radius:20px;background:#eef3ff}</style><h1>我的纹样规则实验记录</h1><p>完成时间：${new Date().toLocaleString('zh-CN',{hour12:false})}</p><h2>1. 我观察的纹样</h2><div class="box">${motifs[S.motif].name}\n基本图案：${esc(S.unitName)}\n延伸方向：${esc(S.direction)}</div><h2>2. 第一版规则</h2><div class="box">${esc(S.rule1)}</div><h2>3. 我的运动实验</h2><div class="box">${motion}；每次${S.distance}格；形成${S.count}个单元。\n${statusForDistance(S.distance).text}</div><h2>4. 数学证据</h2><div class="box">① 相邻单元中心的方向相同，距离等于设定值。\n② 运动前后形状和大小不变，朝向按规则变化。\n③ ${statusForDistance(S.distance).text}</div><h2>5. 修订后的规则</h2><div class="box">${esc(S.rule2)}</div><p>${Object.keys(labels).map(k=>`<span class="tag">${f[k]?'✓':'○'} ${labels[k]}</span>`).join('')}</p><h2>6. 迁移说明</h2><div class="box">${esc(S.transfer)}</div><h2>7. 真实AI对照（若使用）</h2><div class="box">${esc(S.aiReply||'本次未使用')}\n\n我的判断：${esc(S.aiFinding||'未填写')}</div>`}
+function downloadReport(){save();let blob=new Blob([reportHTML()],{type:'text/html;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='我的纹样规则实验记录.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),800)}
+function printReport(){let w=window.open('','_blank');w.document.write(reportHTML());w.document.close();w.print()}
+function resetLab(){if(!confirm('确定清空本机上的本次实验记录吗？'))return;localStorage.removeItem(KEY);location.reload()}
+function restore(){renderMotifs();['unitName','rule1','aiReply','aiFinding','rule2','transfer'].forEach(id=>{if($(id)&&S[id]!=null)$(id).value=S[id]});document.querySelectorAll('#dirChoices .choice').forEach(b=>b.classList.toggle('on',b.dataset.value===S.direction));$('motion').value=S.motion;$('distance').value=String(S.distance);$('count').value=String(S.count);go(S.step||1)}
+restore();
+</script>
+</body>
+</html>

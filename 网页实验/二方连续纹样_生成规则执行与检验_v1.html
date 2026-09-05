@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二方连续纹样｜生成规则执行与数学检验</title>
+<style>
+:root{
+  --ink:#172033;--sub:#5e687b;--line:#dce3ee;--bg:#f4f7fb;--card:#fff;
+  --blue:#2455d6;--blue2:#eaf0ff;--teal:#087f75;--teal2:#e9f8f5;
+  --amber:#a75c00;--amber2:#fff5df;--red:#c03434;--red2:#fff0f0;--green:#177245;
+  --shadow:0 10px 28px rgba(28,48,83,.08);--r:16px
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.6}
+button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer}.hide{display:none!important}
+.top{position:sticky;top:0;z-index:20;background:linear-gradient(120deg,#173d9e,#275ee2 70%,#0b7b78);color:white;box-shadow:0 5px 18px rgba(19,46,109,.18)}
+.topin{max-width:1320px;margin:auto;padding:15px 22px;display:flex;gap:18px;align-items:center}.brand{min-width:340px}.brand h1{margin:0;font-size:21px;letter-spacing:.02em}.brand p{margin:2px 0 0;font-size:12.5px;opacity:.82}.topmeta{margin-left:auto;display:flex;gap:10px;align-items:center}.group{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:7px 10px}.group input{width:90px;border:0;outline:0;background:transparent;color:white}.group input::placeholder{color:#dbe5ff}.progress{width:175px}.ptext{font-size:12px;display:flex;justify-content:space-between}.bar{height:7px;background:rgba(255,255,255,.24);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:#fff;border-radius:99px;transition:.3s}
+.topbtn{border:1px solid rgba(255,255,255,.36);background:rgba(255,255,255,.13);color:#fff;border-radius:10px;padding:8px 12px;font-weight:700}
+.layout{max-width:1320px;margin:20px auto;display:grid;grid-template-columns:224px 1fr;gap:18px;padding:0 18px 45px}.side{position:sticky;top:96px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px;box-shadow:var(--shadow)}
+.timeline{font-size:12px;color:var(--sub);padding:4px 7px 10px}.nav{display:flex;gap:10px;padding:11px 10px;border-radius:12px;margin:4px 0;align-items:center;border:1px solid transparent;background:white;text-align:left;width:100%}.nav:hover{background:#f5f7fb}.nav.on{background:var(--blue2);border-color:#bfcdf7;color:#153eaa}.nav.done .num{background:var(--green)}.num{flex:0 0 31px;height:31px;border-radius:9px;background:#e8edf5;color:#546074;display:grid;place-items:center;font-weight:800}.nav.on .num{background:var(--blue);color:white}.nav b{display:block;font-size:14px}.nav small{display:block;font-size:11px;color:var(--sub)}
+.main{min-width:0}.sec{display:none}.sec.on{display:block}.hero{background:linear-gradient(115deg,#fff,#f4f8ff 65%,#eefcf9);border:1px solid #d8e4f7;border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow);margin-bottom:14px}.hero h2{margin:0 0 5px;font-size:23px}.hero p{margin:0;color:var(--sub)}.goal{display:inline-block;margin-top:12px;padding:6px 11px;background:#172033;color:#fff;border-radius:8px;font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);margin-bottom:14px}.ct{display:flex;align-items:center;gap:9px;font-size:18px;font-weight:800;margin-bottom:5px}.tag{font-size:12px;color:#1743ae;background:var(--blue2);border-radius:7px;padding:3px 7px}.cd{color:var(--sub);font-size:14px;margin-bottom:14px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.motifs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.motif{border:2px solid transparent;border-radius:13px;background:#f7f9fc;padding:8px;text-align:left}.motif:hover{border-color:#b9c7e5}.motif.on{border-color:var(--blue);background:var(--blue2)}.motif svg{width:100%;height:78px;background:white;border-radius:8px}.motif b{display:block;margin-top:4px;font-size:13px}.motif small{font-size:11px;color:var(--sub)}
+.stage{border:1px solid #cad6e7;border-radius:13px;background:white;overflow:auto;min-height:180px}.stage svg{display:block;width:100%;min-width:620px;height:auto}.field{margin:9px 0}.field label{display:block;font-size:13px;font-weight:750;margin-bottom:4px}.field small{color:var(--sub)}input[type=text],input[type=number],textarea,select{width:100%;border:1px solid #cbd5e1;background:#fff;border-radius:9px;padding:9px 10px;outline:none}textarea{min-height:86px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(36,85,214,.11)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid #bdc8d8;background:#fff;border-radius:9px;padding:8px 12px;font-weight:750}.btn:hover{border-color:#7183a0;background:#f8fafc}.primary{background:var(--blue);border-color:var(--blue);color:#fff}.primary:hover{background:#1747c4}.teal{background:var(--teal);border-color:var(--teal);color:white}.amber{background:#fff8e8;border-color:#efc776;color:#855000}.danger{color:#a62626;border-color:#e3aaaa;background:#fff7f7}.mini{font-size:12px;padding:5px 8px}.notice{border-left:4px solid var(--blue);background:#f2f6ff;padding:10px 12px;border-radius:8px;font-size:13.5px}.notice.am{border-color:#d98800;background:var(--amber2)}.notice.gr{border-color:var(--teal);background:var(--teal2)}.notice.rd{border-color:var(--red);background:var(--red2)}
+.locked{position:relative;opacity:.48;pointer-events:none}.locked:after{content:"先完成上一阶段并保存";position:absolute;inset:0;display:grid;place-items:center;color:#23304a;font-weight:800;background:rgba(247,249,252,.64);backdrop-filter:blur(2px);border-radius:12px}.checks{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:10px}.check{padding:9px 7px;border:1px solid var(--line);border-radius:9px;text-align:center;font-size:12px;background:#f8fafc}.check.good{border-color:#87cdb0;background:#effbf6;color:#11653f}.check.bad{border-color:#eba2a2;background:#fff3f3;color:#a12b2b}.check.wait{border-color:#efc775;background:#fff8e9;color:#815000}
+.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#172033;color:#e9f0ff;border-radius:10px;padding:12px;overflow:auto}.panel{border:1px solid var(--line);background:#fafbfd;border-radius:12px;padding:13px}.panel h3{font-size:14px;margin:0 0 7px}.choice{display:flex;gap:7px;flex-wrap:wrap}.choice label{border:1px solid #cad4e2;border-radius:8px;background:white;padding:6px 9px;font-size:12.5px}.choice input{margin-right:4px}.version{border:1px solid #cbd6e8;border-radius:11px;padding:12px;background:#fff;white-space:pre-wrap;min-height:86px}.del{background:#ffe2e2;text-decoration:line-through}.ins{background:#dff8e9;text-decoration:none}.matrix{padding:12px;border-radius:10px;background:#172033;color:#fff}.evidence{display:grid;grid-template-columns:160px 1fr;gap:8px 13px;align-items:start;border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.evidence b{font-size:13px}.evidence textarea{min-height:62px}
+.drop{border:2px dashed #b9c6da;border-radius:11px;padding:12px;text-align:center;background:#f9fbfe}.drop img{display:block;max-height:240px;max-width:100%;margin:10px auto 0;border-radius:8px}.rubric{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.rub{border:1px solid var(--line);border-radius:9px;padding:9px;font-size:12px}.rub strong{display:block;font-size:13px}.rub.ok{border-color:#77c8a8;background:#effbf6}.footnote{font-size:12px;color:var(--sub)}.toastbox{position:fixed;right:18px;bottom:18px;z-index:50}.toast{background:#172033;color:white;padding:10px 13px;border-radius:9px;margin-top:7px;box-shadow:var(--shadow);font-size:13px;animation:in .2s ease}@keyframes in{from{transform:translateY(8px);opacity:0}}
+.sketch{width:100%;height:250px;border:1px solid #bdc9db;border-radius:11px;display:block;touch-action:none;background-color:#fff;background-image:linear-gradient(#e8edf4 1px,transparent 1px),linear-gradient(90deg,#e8edf4 1px,transparent 1px);background-size:22px 22px}.compare3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.comparebox{border:1px solid var(--line);border-radius:11px;background:#fafbfd;padding:10px;min-width:0}.comparebox h3{font-size:13px;margin:0 0 7px}.comparebody{height:210px;overflow:auto;background:#fff;border:1px solid #e1e6ef;border-radius:8px;display:grid;place-items:center;padding:7px;white-space:pre-wrap;font-size:12px}.comparebody img,.comparebody svg{max-width:100%;max-height:100%}.comparebody svg{min-width:0;width:100%;height:auto}details{border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:#fff}summary{cursor:pointer;font-weight:750;color:#24458c}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.side{position:static;display:flex;overflow:auto}.timeline{display:none}.nav{min-width:150px}.grid2,.grid3,.compare3{grid-template-columns:1fr}.motifs{grid-template-columns:repeat(2,1fr)}.checks,.rubric{grid-template-columns:repeat(2,1fr)}.brand{min-width:0}.topmeta .progress{display:none}.evidence{grid-template-columns:1fr}}
+@media(max-width:600px){.topin{padding:12px}.brand h1{font-size:17px}.brand p,.group{display:none}.layout{padding:0 9px}.card,.hero{padding:15px}.motifs{grid-template-columns:1fr 1fr}.topbtn{padding:7px}.topbtn span{display:none}}
+@media print{.top,.side,.btn,.no-print{display:none!important}.layout{display:block;margin:0;padding:0}.sec{display:block!important}.card,.hero{box-shadow:none;break-inside:avoid}.main{width:100%}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="topin">
+    <div class="brand"><h1>二方连续纹样 · 可检验规则实验室</h1><p>教材活动1再设计｜同伴能复现 · AI能执行 · 结果能检验</p></div>
+    <div class="topmeta">
+      <label class="group">组码 <input id="groupCode" placeholder="如 A03" oninput="save()"></label>
+      <div class="progress"><div class="ptext"><span>证据链进度</span><b id="progTxt">0%</b></div><div class="bar"><i id="progBar"></i></div></div>
+      <button class="topbtn" onclick="exportReport()">⇩ <span>导出证据报告</span></button>
+      <button class="topbtn" onclick="resetAll()">↺ <span>清空本组</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="side">
+    <div class="timeline">40分钟课堂链：9′＋5′＋15′＋5′＋6′</div>
+    <button class="nav on" data-step="1" onclick="go(1)"><span class="num">1</span><span><b>观察识别</b><small>圈单位 · 标运动</small></span></button>
+    <button class="nav" data-step="2" onclick="go(2)"><span class="num">2</span><span><b>规则 1.0</b><small>保留原生表达</small></span></button>
+    <button class="nav" data-step="3" onclick="go(3)"><span class="num">3</span><span><b>双重执行</b><small>同伴 · 真实GAI</small></span></button>
+    <button class="nav" data-step="4" onclick="go(4)"><span class="num">4</span><span><b>数学验收</b><small>三类证据</small></span></button>
+    <button class="nav" data-step="5" onclick="go(5)"><span class="num">5</span><span><b>修订迁移</b><small>规则 2.0 · 出门条</small></span></button>
+  </aside>
+
+  <main class="main">
+    <section class="sec on" id="sec1">
+      <div class="hero"><h2>从现实纹样中识别“怎样连续”</h2><p>今天不比谁画得漂亮，而要把隐藏在图案里的运动关系说清楚。</p><span class="goal">核心问题：怎样写出一条同伴能复现、AI能执行、结果能检验的生成规则？</span></div>
+      <div class="card">
+        <div class="ct"><span class="tag">教材观察</span>选择一行二方连续纹样</div>
+        <div class="cd">以下是与教材活动结构一致的课堂示意纹样。正式授课时，可替换为教材表1对应行截图。</div>
+        <div class="motifs" id="motifCards"></div>
+      </div>
+      <div class="card">
+        <div class="ct"><span class="tag">运动分析图</span>圈单位、标对应点、画运动箭头</div>
+        <div class="grid2">
+          <div><div class="stage" id="observeStage"></div><div class="row" style="margin-top:8px"><button class="btn mini" onclick="toggleOverlay('unit')">▣ 单位边界</button><button class="btn mini" onclick="toggleOverlay('points')">● 对应点</button><button class="btn mini" onclick="toggleOverlay('arrow')">→ 运动箭头</button></div></div>
+          <div>
+            <div class="field"><label>我把什么看作一个基本图案？</label><input id="obsG" type="text" placeholder="例：方格框内的一枝叶形" oninput="save()"></div>
+            <div class="field"><label>纹样沿哪个方向不断延伸？</label><select id="obsDir" onchange="save()"><option value="">请选择</option><option>水平方向向右</option><option>水平方向向左、向右</option></select></div>
+            <div class="field"><label>我初步判断使用了什么图形运动？</label><select id="obsT" onchange="save()"><option value="">暂不确定</option><option>平移</option><option>轴对称后平移</option><option>旋转后平移</option></select></div>
+            <div class="field"><label>观察依据</label><textarea id="obsNote" placeholder="我看见……重复出现；A点与A′点之间……" oninput="save()"></textarea></div>
+            <button class="btn primary" onclick="saveObservation()">保存运动分析并进入规则1.0</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="sec2">
+      <div class="hero"><h2>规则卡 1.0：先写，再检验</h2><p>暂时不看五要素模板。想象原图已经收走，只凭这段文字，陌生同伴能画出前三个单元吗？</p></div>
+      <div class="card">
+        <div class="ct"><span class="tag">原生表达</span>写下第一版生成规则</div>
+        <div class="notice am">不要为了“像提示词”而写得复杂。规则质量只看能否执行、能否检验。</div>
+        <div class="field"><label>规则卡1.0</label><textarea id="rule1" style="min-height:150px" placeholder="例：把这个叶形向右连续复制……" oninput="save()"></textarea></div>
+        <div class="row"><button class="btn primary" id="lockBtn" onclick="lockRule1()">锁定规则1.0并交给同伴</button><button class="btn" onclick="unlockRule1()">课堂纠错：解除锁定</button><span class="footnote" id="lockInfo">锁定后保留时间戳，便于与2.0比较。</span></div>
+      </div>
+      <div class="card">
+        <div class="ct"><span class="tag">预测</span>先不看分类框架，写下你的担心</div>
+        <div class="cd">这一阶段不出现G、T、λ、D、V，以免把教师的完整框架提前变成学生答案。</div>
+        <textarea id="predictionNote" placeholder="如果原图被收走，我担心执行者还需要猜……" oninput="save()"></textarea>
+      </div>
+    </section>
+
+    <section class="sec" id="sec3">
+      <div class="hero"><h2>同一条规则，两位执行者</h2><p>同伴和GAI都不是裁判；执行差异是用来追查规则歧义的学习资源。</p></div>
+      <div class="card" id="peerCard">
+        <div class="ct"><span class="tag">第一执行者</span>同伴盲执行</div>
+        <div class="cd">执行同伴不看原图，也不先看运动方式和距离选项。请先只读规则1.0，在草图板或方格纸上画前三个单元；不能确定处直接标“？”。</div>
+        <div class="notice am" id="rule1Echo">规则1.0尚未锁定。</div>
+        <div style="margin-top:11px"><canvas id="peerCanvas" class="sketch" width="900" height="250" aria-label="同伴盲执行草图板"></canvas></div>
+        <div class="row" style="margin:8px 0 12px"><button class="btn mini" onclick="setSketchMode('pen')">✎ 画笔</button><button class="btn mini" onclick="setSketchMode('eraser')">⌫ 橡皮</button><button class="btn mini danger" onclick="clearSketch()">清空草图</button><label class="footnote"><input id="peerPaper" type="checkbox" onchange="save()"> 已在纸上完成盲执行</label></div>
+        <details id="peerInterpret"><summary>草图完成后，再展开记录“我是怎样理解的”</summary>
+          <div class="grid2" style="margin-top:9px">
+            <div class="panel">
+              <div class="grid3">
+                <div class="field"><label>运动方式</label><select id="peerT" onchange="drawPeer();save()"><option value="translate">仅平移</option><option value="reflect">轴对称后平移</option><option value="rotate">旋转180°后平移</option></select></div>
+                <div class="field"><label>每次移动</label><select id="peerDist" onchange="drawPeer();save()"><option value="2">2格</option><option value="3">3格</option><option value="4" selected>4格</option><option value="5">5格</option><option value="6">6格</option></select></div>
+                <div class="field"><label>画几个单元</label><select id="peerCount" onchange="drawPeer();save()"><option>3</option><option>4</option><option>5</option></select></div>
+              </div>
+              <div class="field"><label>遇到的疑问</label><textarea id="peerQuestion" placeholder="例：规则没有说明平移距离，我只能暂按4格理解。" oninput="save()"></textarea></div>
+              <div class="field"><label>复现结果</label><select id="peerOutcome" onchange="updateMatrix();save()"><option value="">请选择</option><option value="unique">可以唯一复现</option><option value="multi">出现两种及以上解释</option><option value="stop">信息不足，无法继续</option></select></div>
+              <button class="btn teal" onclick="recordPeer()">保存同伴执行证据</button>
+            </div>
+            <div><div class="stage" id="peerStage"></div><p class="footnote">参数图只记录同伴事后的解释，不替代前面的盲画。</p></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="card" id="aiCard">
+        <div class="ct"><span class="tag">第二执行者</span>真实GAI受约束执行</div>
+        <div class="notice rd"><b>技术边界：</b>本页不把预设答案叫作AI，也不在单文件中保存模型密钥。请复制统一提示词到学校允许使用的GAI，再把原始结果带回本页。</div>
+        <div class="grid2" style="margin-top:12px">
+          <div>
+            <div class="field"><label>统一执行提示词</label><textarea id="aiPrompt" readonly style="min-height:190px"></textarea></div>
+            <div class="row"><button class="btn primary" onclick="makePrompt(true)">复制提示词</button><button class="btn" onclick="downloadMotifReference()">导出基本图案参考</button><button class="btn amber" onclick="loadOfflineSample()">载入网络中断预案</button></div>
+            <p class="footnote">“网络中断预案”是教师预置样例，会明确标注，不计作实时GAI输出。</p>
+          </div>
+          <div>
+            <div class="field"><label>粘贴GAI原始文字输出</label><textarea id="aiText" placeholder="不要润色或改写AI原始输出；若AI指出信息不足，也完整保留。" oninput="save()"></textarea></div>
+            <div class="drop"><label><b>可选：导入GAI生成结果截图</b><br><span class="footnote">仅在本机预览，不会自动上传。</span><br><input id="aiImage" type="file" accept="image/*" onchange="loadImage(this)"></label><img id="aiPreview" class="hide" alt="AI输出截图"></div>
+            <div class="field"><label>AI执行状态</label><select id="aiOutcome" onchange="updateMatrix();save()"><option value="">请选择</option><option value="unique">给出一种明确结果</option><option value="multi">给出多种解释/主动追问</option><option value="stop">指出信息不足，未执行</option><option value="violate">违反已写规则或擅自美化</option></select></div>
+            <button class="btn teal" onclick="recordAI()">保存AI原始输出</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ct"><span class="tag">差异诊断</span>先判断问题来自哪里</div>
+        <div class="matrix" id="matrixResult">请先记录同伴与AI的执行状态。</div>
+        <div class="field"><label>逐条追问：是规则含混，还是执行者违反规则？</label><textarea id="differenceNote" placeholder="同伴……；AI……；规则中没有/已经明确写出……" oninput="save()"></textarea></div>
+        <button class="btn primary" onclick="finishDouble()">完成双重执行，提炼五要素</button>
+      </div>
+    </section>
+
+    <section class="sec" id="sec4">
+      <div class="hero"><h2>用数学证据验收，而不是凭“像不像”</h2><p>把规则写成可检验假设，再依次核对对应点、运动性质和边界衔接的一致性。</p></div>
+      <div class="card" id="ruleElements">
+        <div class="ct"><span class="tag">五要素</span>R = (G, T, λ, D, V)</div>
+        <div class="cd">这些要素来自刚才的执行困难，不要求机械记忆。先补全，再由精确几何引擎画出“规则应有的结果”。</div>
+        <div class="checks" id="elementChecks"></div>
+        <div class="grid2" style="margin-top:12px">
+          <div>
+            <div class="field"><label>G｜基本图案：移动谁？单位边界在哪里？</label><input id="rG" type="text" placeholder="例：蓝色方格框内的一枝叶形" oninput="syncRule();save()"></div>
+            <div class="field"><label>T｜运动方式与先后顺序</label><select id="rT" onchange="syncRule();drawReference();save()"><option value="translate">仅作平移</option><option value="reflect">先关于竖直边界作轴对称，再平移</option><option value="rotate">先绕右边界中点旋转180°，再平移</option></select></div>
+            <div class="field"><label>λ｜运动要素</label><div class="row"><select id="rDir" onchange="syncRule();save()" style="flex:1"><option>向右</option><option>向左</option></select><select id="rDist" onchange="syncRule();drawReference();save()" style="flex:1"><option value="2">2格</option><option value="3">3格</option><option value="4" selected>4格</option><option value="5">5格</option><option value="6">6格</option></select></div></div>
+          </div>
+          <div>
+            <div class="field"><label>D｜重复范围</label><select id="rCount" onchange="syncRule();drawReference();save()"><option value="3">形成3个连续单元</option><option value="4">形成4个连续单元</option><option value="5" selected>形成5个连续单元</option><option value="6">形成6个连续单元</option></select></div>
+            <div class="field"><label>V｜验收条件</label><textarea id="rV" placeholder="不要照抄术语：请写清你准备看什么、量什么、比较什么。" oninput="syncRule();save()"></textarea></div>
+            <div class="formula" id="structuredRule">等待填写……</div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:10px"><button class="btn primary" onclick="diagnoseElements()">规则要素诊断</button><button class="btn teal" onclick="drawReference(true)">严格执行结构化规则</button></div>
+      </div>
+
+      <div class="card">
+        <div class="ct"><span class="tag">参考执行</span>精确几何引擎不等于GAI</div>
+        <div class="notice gr">此画布只按结构化参数计算，用来提供可测量的数学参照；它不会理解自然语言，也不会替学生判定GAI正确与否。</div>
+        <div class="stage" id="referenceStage" style="margin-top:12px"></div>
+        <div class="row" style="margin-top:8px"><button class="btn mini" onclick="toggleRef('grid')"># 网格</button><button class="btn mini" onclick="toggleRef('points')">A 对应点</button><button class="btn mini" onclick="toggleRef('bounds')">| 单元边界</button><button class="btn mini" onclick="toggleRef('arrows')">→ 运动关系</button></div>
+      </div>
+
+      <div class="card">
+        <div class="ct"><span class="tag">并列验收台</span>同伴结果、GAI结果、数学参照同时在场</div>
+        <div class="cd">先指出差异，再选择证据。数学参照只是测量工具，不自动宣布谁对。</div>
+        <div class="compare3">
+          <div class="comparebox"><h3>① 同伴盲执行</h3><div class="comparebody" id="comparePeer">尚未保存草图／纸上记录</div></div>
+          <div class="comparebox"><h3>② GAI原始输出</h3><div class="comparebody" id="compareAI">尚未导入原始输出</div></div>
+          <div class="comparebox"><h3>③ 精确数学参照</h3><div class="comparebody" id="compareRef"></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ct"><span class="tag">数学检验单</span>三类证据＋规则一致性</div>
+        <div class="evidence">
+          <b>① 对应点证据<br><label><input id="ev1" type="checkbox" onchange="updateRubric();save()"> 已标不少于两组</label></b><textarea id="evNote1" placeholder="我选取A—A′、B—B′，检查……" oninput="save()"></textarea>
+          <b>② 运动性质／不变量<br><label><input id="ev2" type="checkbox" onchange="updateRubric();save()"> 已核对</label></b><textarea id="evNote2" placeholder="平移/旋转/轴对称前后，图形的……保持不变；AI却……" oninput="save()"></textarea>
+          <b>③ 边界衔接一致性<br><label><input id="ev3" type="checkbox" onchange="updateRubric();save()"> 已检查三单元</label></b><textarea id="evNote3" placeholder="在第__个边界出现/没有出现空隙、重叠或节奏突变……" oninput="save()"></textarea>
+          <b>④ 规则—输出逐条对应<br><label><input id="ev4" type="checkbox" onchange="updateRubric();save()"> 已追溯原因</label></b><textarea id="evNote4" placeholder="规则第__条已经写明……，所以这是规则缺陷/AI执行偏差。" oninput="save()"></textarea>
+        </div>
+        <div class="grid2" style="margin-top:12px"><div class="field"><label>最终判定</label><select id="verdict" onchange="save()"><option value="">请选择</option><option>规则1.0信息不足，需要修订</option><option>规则基本完整，AI执行违反规则</option><option>同伴凭经验自动补全，规则仍需修订</option><option>两位执行者都可复现，且通过数学验收</option></select></div><div class="field"><label>最关键的数学证据</label><input id="keyEvidence" type="text" placeholder="不是‘看起来一样’，而是……" oninput="save()"></div></div>
+        <div class="rubric" id="rubric"></div>
+        <button class="btn primary" style="margin-top:12px" onclick="finishEvidence()">保存数学验收并生成规则2.0</button>
+      </div>
+    </section>
+
+    <section class="sec" id="sec5">
+      <div class="hero"><h2>规则卡 2.0：修订，并迁移回教材新行</h2><p>最终作品不是一幅漂亮图，而是一条经执行和证据检验后更可靠的数学规则。</p></div>
+      <div class="card">
+        <div class="ct"><span class="tag">版本对照</span>从含混表达走向可执行规则</div>
+        <div class="grid2"><div><h3>规则1.0</h3><div class="version" id="v1View">尚未形成</div></div><div><h3>规则2.0</h3><textarea id="rule2" style="min-height:150px" oninput="renderDiff();save()"></textarea></div></div>
+        <div class="field"><label>本次修改了哪些要素？</label><div class="choice" id="changedChoices"><label><input type="checkbox" value="G" onchange="save()">G 对象</label><label><input type="checkbox" value="T" onchange="save()">T 方式</label><label><input type="checkbox" value="λ" onchange="save()">λ 要素</label><label><input type="checkbox" value="D" onchange="save()">D 范围</label><label><input type="checkbox" value="V" onchange="save()">V 验收</label></div></div>
+        <div class="grid2"><div><h3>1.0差异标记</h3><div class="version" id="diffOld"></div></div><div><h3>2.0差异标记</h3><div class="version" id="diffNew"></div></div></div>
+      </div>
+
+      <div class="card">
+        <div class="ct"><span class="tag">教材内迁移</span>换一行纹样，哪些保留、哪些改变？</div>
+        <div class="field" style="max-width:320px"><label>个人编号（不填姓名）</label><input id="studentCode" type="text" placeholder="例：A03-2" oninput="save()"><small>小组共用设备时，用于区分个人出门条。</small></div>
+        <div class="grid2">
+          <div><div class="field"><label>新纹样类型</label><select id="transferType" onchange="drawTransfer();save()"><option value="reflect">轴对称后平移</option><option value="rotate">旋转180°后平移</option><option value="translate">仅平移但改变单位宽度</option></select></div><div class="stage" id="transferStage"></div></div>
+          <div>
+            <div class="field"><label>可以保留的规则要素及理由</label><textarea id="transferKeep" placeholder="例：G、D、V的提问框架可以保留，因为……" oninput="save()"></textarea></div>
+            <div class="field"><label>必须改变的规则要素及新条件</label><textarea id="transferChange" placeholder="例：T改为先关于右边界轴对称再平移；λ还要说明……" oninput="save()"></textarea></div>
+            <div class="field"><label>一条验收条件V及证据</label><textarea id="transferV" placeholder="不能只写‘看起来连续’，我将检查……" oninput="save()"></textarea></div>
+            <div class="field"><label>若AI与同伴结果不同，我首先检查什么？为什么？</label><textarea id="transferJudge" placeholder="先检查规则能否唯一解释，再逐条核对输出……" oninput="save()"></textarea></div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:10px"><button class="btn teal" onclick="finishTransfer()">提交个人出门条</button><button class="btn primary" onclick="exportReport()">导出完整学习证据</button></div>
+      </div>
+
+      <div class="card">
+        <div class="ct"><span class="tag">应用意识证据</span>本节课观察什么，而不是夸大什么</div>
+        <div class="rubric" id="finalRubric"></div>
+        <p class="footnote">报告只呈现本节课中结构提取、规则表达、证据检验与迁移的行为证据，不据此宣称“应用意识显著提升”。</p>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="toastbox" id="toasts"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const motifs={
+ leaf:{name:'叶蔓纹',desc:'先观察基本枝叶与方向',kind:'translate'},
+ mirror:{name:'对叶纹',desc:'比较同向与相向',kind:'reflect'},
+ bird:{name:'回首鸟纹',desc:'关注朝向变化',kind:'rotate'},
+ flower:{name:'菱花纹',desc:'比较单位边界选择',kind:'translate'}
+};
+let ST={step:1,motif:'leaf',overlay:{unit:true,points:true,arrow:true},ref:{grid:true,points:true,bounds:true,arrows:true},done:{},image:'',peerSketch:'',lockedAt:'',offline:false,sketchMode:'pen'};
+
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function val(id){return $(id)?$(id).value:''} function checked(id){return $(id)&&$(id).checked}
+function toast(s){let d=document.createElement('div');d.className='toast';d.textContent=s;$('toasts').appendChild(d);setTimeout(()=>d.remove(),2300)}
+function setVal(id,v){if($(id)&&v!==undefined)$(id).value=v} function setCheck(id,v){if($(id))$(id).checked=!!v}
+function save(){
+  const ids=['groupCode','obsG','obsDir','obsT','obsNote','rule1','predictionNote','peerT','peerDist','peerCount','peerQuestion','peerOutcome','aiText','aiOutcome','differenceNote','rG','rT','rDir','rDist','rCount','rV','evNote1','evNote2','evNote3','evNote4','verdict','keyEvidence','rule2','studentCode','transferType','transferKeep','transferChange','transferV','transferJudge'];
+  ST.form={};ids.forEach(id=>ST.form[id]=val(id));
+  ST.evs=[1,2,3,4].map(i=>checked('ev'+i));
+  ST.peerPaper=checked('peerPaper');
+  ST.changed=[...document.querySelectorAll('#changedChoices input:checked')].map(x=>x.value);
+  try{let copy=JSON.parse(JSON.stringify(ST));copy.image='';localStorage.setItem('friezeRuleLab',JSON.stringify(copy))}catch(e){}
+  progress();
+}
+function restore(){
+  try{let s=JSON.parse(localStorage.getItem('friezeRuleLab')||'null');if(s)ST=Object.assign(ST,s)}catch(e){}
+  if(ST.form)Object.entries(ST.form).forEach(([k,v])=>setVal(k,v));
+  (ST.evs||[]).forEach((v,i)=>setCheck('ev'+(i+1),v));
+  setCheck('peerPaper',ST.peerPaper);
+  (ST.changed||[]).forEach(v=>{let e=document.querySelector(`#changedChoices input[value="${v}"]`);if(e)e.checked=true});
+}
+function go(n){ST.step=n;document.querySelectorAll('.sec').forEach((s,i)=>s.classList.toggle('on',i===n-1));document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('on',+x.dataset.step===n));window.scrollTo({top:0,behavior:'smooth'});save();if(n===3){drawPeer();makePrompt(false);$('rule1Echo').textContent='规则1.0：'+(val('rule1')||'尚未锁定')}if(n===4){syncRule();drawReference();syncCompare()}if(n===5){makeRule2(false);drawTransfer();renderDiff();updateFinalRubric()}}
+function progress(){
+  const marks=[!!ST.done.observe,!!ST.lockedAt,!!ST.done.peer,!!ST.done.ai,!!ST.done.double,[1,2,3,4].every(i=>checked('ev'+i)),!!ST.done.evidence,!!ST.done.transfer];
+  const p=Math.round(marks.filter(Boolean).length/marks.length*100);$('progBar').style.width=p+'%';$('progTxt').textContent=p+'%';
+  document.querySelectorAll('.nav').forEach(n=>{let k=+n.dataset.step;n.classList.toggle('done',(k===1&&ST.done.observe)||(k===2&&ST.lockedAt)||(k===3&&ST.done.double)||(k===4&&ST.done.evidence)||(k===5&&ST.done.transfer))});
+}
+
+function motifShape(kind,x,y,w,h,flip){
+  let tf='translate('+x+' '+y+') scale('+(w/100)+' '+(h/100)+')';
+  if(flip==='reflect')tf+=' translate(100 0) scale(-1 1)';
+  if(flip==='rotate')tf+=' translate(100 100) rotate(180 0 0)';
+  let body='';
+  if(kind==='leaf')body='<path d="M12 72 Q48 54 87 22" fill="none" stroke="#177245" stroke-width="5" stroke-linecap="round"/><ellipse cx="38" cy="54" rx="20" ry="9" transform="rotate(-28 38 54)" fill="#6fc49b" stroke="#177245" stroke-width="2"/><ellipse cx="64" cy="39" rx="18" ry="8" transform="rotate(148 64 39)" fill="#a6ddbf" stroke="#177245" stroke-width="2"/>';
+  if(kind==='mirror')body='<path d="M50 78 L50 25" stroke="#1b6b78" stroke-width="4"/><path d="M50 62 Q20 58 17 36 Q43 35 50 54" fill="#7ed2c9" stroke="#087f75" stroke-width="2"/><path d="M50 46 Q78 42 82 20 Q57 20 50 38" fill="#b9ebe5" stroke="#087f75" stroke-width="2"/>';
+  if(kind==='bird')body='<path d="M17 60 Q38 24 62 45 L86 30 L76 56 L88 71 Q55 77 32 64 Z" fill="#f2b84b" stroke="#8c5c00" stroke-width="2.5"/><circle cx="61" cy="48" r="3" fill="#172033"/><path d="M20 59 L7 51 L18 69" fill="#d68131" stroke="#8c5c00" stroke-width="2"/>';
+  if(kind==='flower')body='<path d="M50 10 L86 50 L50 90 L14 50 Z" fill="#a9bdf7" stroke="#3657b5" stroke-width="2.5"/><circle cx="50" cy="50" r="13" fill="#fff" stroke="#3657b5" stroke-width="2"/><path d="M50 12 L50 88 M15 50 L85 50" stroke="#6e84d0" stroke-width="2"/>';
+  return '<g transform="'+tf+'">'+body+'</g>';
+}
+function miniSVG(kind,mode){let s='<svg viewBox="0 0 280 90" xmlns="http://www.w3.org/2000/svg">';for(let i=0;i<4;i++){let f=mode==='reflect'&&i%2?'reflect':mode==='rotate'&&i%2?'rotate':'';s+=motifShape(kind,i*70+6,8,58,72,f)}return s+'</svg>'}
+function buildMotifs(){let h='';Object.entries(motifs).forEach(([k,m])=>h+=`<button class="motif ${ST.motif===k?'on':''}" onclick="chooseMotif('${k}')">${miniSVG(k,m.kind)}<b>${m.name}</b><small>${m.desc}</small></button>`);$('motifCards').innerHTML=h}
+function chooseMotif(k){ST.motif=k;buildMotifs();drawObserve();drawPeer();drawReference();makePrompt(false);save()}
+function toggleOverlay(k){ST.overlay[k]=!ST.overlay[k];drawObserve();save()}
+function drawObserve(){
+  $('observeStage').innerHTML=patternSVG({kind:ST.motif,mode:motifs[ST.motif].kind,dist:4,count:4},{grid:true,points:ST.overlay.points,bounds:ST.overlay.unit,arrows:ST.overlay.arrow});
+}
+function saveObservation(){if(!val('obsG').trim()||!val('obsDir')){toast('请先说明基本图案和延伸方向');return}ST.done.observe=true;save();toast('运动分析已保存');go(2)}
+function lockRule1(){let t=val('rule1').trim();if(t.length<8){toast('请先写出一条完整句子的初始规则');return}ST.lockedAt=new Date().toLocaleString('zh-CN',{hour12:false});$('rule1').readOnly=true;$('lockInfo').textContent='已锁定：'+ST.lockedAt;ST.done.rule1=true;save();makePrompt(false);toast('规则1.0已锁定');go(3)}
+function unlockRule1(){if(!ST.lockedAt){toast('规则尚未锁定');return}if(!confirm('解除锁定会保留原时间，但允许改写1.0。课堂研究中只应在误操作时使用。'))return;$('rule1').readOnly=false;toast('已解除输入锁定，请修改后重新锁定')}
+
+let sketch={drawing:false,last:null};
+function initSketch(){
+  const c=$('peerCanvas'),ctx=c.getContext('2d');
+  const pt=e=>{let r=c.getBoundingClientRect();return{x:(e.clientX-r.left)*c.width/r.width,y:(e.clientY-r.top)*c.height/r.height}};
+  c.addEventListener('pointerdown',e=>{sketch.drawing=true;sketch.last=pt(e);c.setPointerCapture(e.pointerId)});
+  c.addEventListener('pointermove',e=>{if(!sketch.drawing)return;let p=pt(e);ctx.lineCap='round';ctx.lineJoin='round';ctx.lineWidth=ST.sketchMode==='eraser'?24:4;ctx.strokeStyle='#172033';ctx.globalCompositeOperation=ST.sketchMode==='eraser'?'destination-out':'source-over';ctx.beginPath();ctx.moveTo(sketch.last.x,sketch.last.y);ctx.lineTo(p.x,p.y);ctx.stroke();sketch.last=p});
+  const stop=()=>{if(!sketch.drawing)return;sketch.drawing=false;ctx.globalCompositeOperation='source-over';ST.peerSketch=c.toDataURL('image/png');save();syncCompare()};
+  c.addEventListener('pointerup',stop);c.addEventListener('pointercancel',stop);
+  if(ST.peerSketch){let im=new Image();im.onload=()=>ctx.drawImage(im,0,0,c.width,c.height);im.src=ST.peerSketch}
+}
+function setSketchMode(m){ST.sketchMode=m;toast(m==='pen'?'已切换为画笔':'已切换为橡皮')}
+function clearSketch(){let c=$('peerCanvas');c.getContext('2d').clearRect(0,0,c.width,c.height);ST.peerSketch='';save();syncCompare();toast('同伴草图已清空')}
+
+function interpretationOpts(prefix){return{kind:ST.motif,mode:val(prefix+'T')||'translate',dist:+val(prefix+'Dist')||4,count:+val(prefix+'Count')||3}}
+function patternSVG(o,flags){
+  flags=flags||{grid:true,points:true,bounds:true,arrows:true};let cell=18,u=o.dist*cell,baseW=4*cell,W=Math.max(620,o.count*u+40),H=224,s='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  s+='<defs><pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#e6ebf3"/></pattern><marker id="ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2455d6"/></marker></defs>';
+  s+='<rect width="100%" height="100%" fill="'+(flags.grid?'url(#grid)':'#fff')+'"/>';
+  const left=i=>20+i*u+(u-baseW)/2;
+  const point=(i)=>{let x=.24*baseW,y=58,flip=o.mode==='reflect'&&i%2?'reflect':o.mode==='rotate'&&i%2?'rotate':'';if(flip==='reflect')x=baseW-x;if(flip==='rotate'){x=baseW-x;y=150-y}return{x:left(i)+x,y}};
+  for(let i=0;i<o.count;i++){let f=o.mode==='reflect'&&i%2?'reflect':o.mode==='rotate'&&i%2?'rotate':'';s+=motifShape(o.kind,left(i),35,baseW,115,f);if(flags.bounds)s+='<rect x="'+(20+i*u)+'" y="24" width="'+u+'" height="140" fill="none" stroke="#cf4d4d" stroke-dasharray="6 5"/>'}
+  if(flags.points)for(let i=0;i<o.count;i++){let p=point(i);s+='<circle cx="'+p.x+'" cy="'+p.y+'" r="5" fill="#2455d6"/><text x="'+(p.x+8)+'" y="'+(p.y-7)+'" font-size="12" fill="#173d9e" font-weight="700">A'+i+'</text>'}
+  let arrowLabel=o.mode==='translate'?'平移'+o.dist+'格':o.mode==='reflect'?'轴对称→平移'+o.dist+'格':'旋转180°→平移'+o.dist+'格';
+  if(flags.arrows)for(let i=0;i<o.count-1;i++){let p=point(i),q=point(i+1);s+='<path d="M'+p.x+' '+(p.y+26)+' Q'+((p.x+q.x)/2)+' '+(Math.max(p.y,q.y)+43)+' '+q.x+' '+(q.y+26)+'" fill="none" stroke="#2455d6" stroke-width="2.5" marker-end="url(#ar2)"/><text x="'+((p.x+q.x)/2)+'" y="190" text-anchor="middle" font-size="11" fill="#173d9e">'+arrowLabel+'</text>'}
+  s+='<text x="20" y="207" font-size="12" fill="#5e687b">基本图案大小固定为4格；'+(o.mode==='translate'?'仅平移':o.mode==='reflect'?'每一步：轴对称 → 平移':'每一步：旋转180° → 平移')+'；共 '+o.count+' 个单元</text>';
+  if(o.dist!==4)s+='<text x="20" y="220" font-size="12" fill="#a75c00">当前步长为'+o.dist+'格，与所选基本图案宽度不同：请重点检查边界节奏、空隙或重叠。</text>';
+  s+='</svg>';return s;
+}
+function drawPeer(){$('peerStage').innerHTML=patternSVG(interpretationOpts('peer'),{grid:true,points:true,bounds:true,arrows:true})}
+function recordPeer(){if(!ST.peerSketch&&!checked('peerPaper')){toast('请先完成草图板盲画，或确认已在方格纸上完成');return}if(!val('peerOutcome')){toast('请选择同伴复现结果');return}if(!val('peerQuestion').trim())toast('建议保留同伴的疑问，即使写“无”');ST.done.peer=true;save();updateMatrix();syncCompare();toast('同伴执行证据已保存')}
+function makePrompt(copy){
+  let p='你是“规则执行者”，不是设计者。请先查看我同时上传的“基本图案参考”，再严格遵守：\n1. 只根据下列规则执行，不自行补充方向、距离、对称轴、旋转中心、角度、顺序、次数或审美元素。\n2. 若规则存在两种解释或信息不足，先逐项列出无法确定的内容，不要猜测。\n3. 若信息足够，再给出带方格、单位边界和对应点标记的二方连续纹样示意；必须保持基本图案的形状和大小。\n4. 最后逐条说明输出如何对应原规则。\n5. 本轮只执行一次，不替我修改规则。\n\n基本图案：'+(val('obsG')||motifs[ST.motif].name)+'。\n学生规则1.0：\n'+(val('rule1')||'〔尚未填写〕');
+  $('aiPrompt').value=p;if(copy){navigator.clipboard?.writeText(p).then(()=>toast('提示词已复制')).catch(()=>{ $('aiPrompt').select();document.execCommand('copy');toast('提示词已复制')})}
+}
+function downloadMotifReference(){let svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240"><rect width="420" height="240" fill="white"/><rect x="110" y="40" width="200" height="150" fill="none" stroke="#cf4d4d" stroke-width="3" stroke-dasharray="9 6"/>${motifShape(ST.motif,120,50,180,130,'')}<text x="210" y="218" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#172033">基本图案参考：${esc(val('obsG')||motifs[ST.motif].name)}</text></svg>`;let blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='基本图案参考_'+motifs[ST.motif].name+'.svg';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('已导出基本图案参考，请与提示词一同交给GAI')}
+function loadOfflineSample(){ST.offline=true;$('aiText').value='【教师预置网络中断样例，不是实时GAI输出】\n我把“向右连续复制”解释为：每次向右平移4格，共生成5个单元。原规则没有明确平移距离和重复次数，因此这两个数值是执行者自行补充的。';$('aiOutcome').value='unique';save();updateMatrix();syncCompare();toast('已载入并标明教师预置样例')}
+function loadImage(inp){let f=inp.files&&inp.files[0];if(!f)return;let rd=new FileReader();rd.onload=()=>{ST.image=rd.result;$('aiPreview').src=rd.result;$('aiPreview').classList.remove('hide');save();syncCompare();toast('截图仅在本机载入')};rd.readAsDataURL(f)}
+function recordAI(){if(!val('aiText').trim()||!val('aiOutcome')){toast('请保留AI原始文字并选择执行状态');return}ST.done.ai=true;save();updateMatrix();syncCompare();toast('AI原始输出已保存')}
+function updateMatrix(){let p=val('peerOutcome'),a=val('aiOutcome'),t='请先记录同伴与AI的执行状态。';if(p&&a){if(p==='unique'&&a==='unique')t='两者都给出明确结果：规则可能较完整，也可能两者作了相同的自动补全，仍须数学验收。';else if((p==='multi'||p==='stop')&&(a==='multi'||a==='stop'))t='两者都暴露不确定：规则多半存在遗漏、歧义或矛盾。追问缺少G、T、λ、D、V中的哪一项。';else if(p==='unique'&&(a==='violate'||a==='multi'||a==='stop'))t='同伴能复现而AI不一致：可能是AI执行偏差，也可能同伴凭经验补全。必须逐条对照规则。';else if((p==='multi'||p==='stop')&&a==='unique')t='AI可能自动补足未写条件。陌生同伴不能复现，说明原规则仍不充分。';else if(a==='violate')t='AI违反或美化了已写规则：不要为了迁就AI而改对的数学规则，应指出它违反了哪一条。';else t='出现执行差异：先检查规则是否允许多解，再检查执行者是否逐条遵守。'}$('matrixResult').textContent=t}
+function finishDouble(){if(!ST.done.peer||!ST.done.ai||!val('differenceNote').trim()){toast('请先保存两位执行者的证据，并写出差异诊断');return}ST.done.double=true;save();toast('双重执行证据链已完成');go(4)}
+
+function modeText(){return val('rT')==='translate'?'仅作平移':val('rT')==='reflect'?'先关于每个单位的右边界作轴对称，再平移':'先绕每个单位右边界中点旋转180°，再平移'}
+function syncRule(){let g=val('rG'),dir=val('rDir'),d=val('rDist'),n=val('rCount'),v=val('rV');$('structuredRule').textContent=`G=${g||'〔未写〕'}\nT=${modeText()}\nλ=${dir}${d}格\nD=连续形成${n}个单元\nV=${v||'〔未写〕'}`;diagnoseElements(false)}
+function diagnoseElements(show=true){let arr=[['G',val('rG').trim().length>3],['T',!!val('rT')],['λ',!!val('rDir')&&!!val('rDist')],['D',!!val('rCount')],['V',val('rV').trim().length>12]];$('elementChecks').innerHTML=arr.map(x=>`<div class="check ${x[1]?'good':'bad'}"><b>${x[0]}</b><br>${x[1]?'已明确':'需要补充'}</div>`).join('');if(show)toast(arr.every(x=>x[1])?'五要素已具备，可进入数学检验':'仍有规则要素不明确')}
+function referenceOpts(){return{kind:ST.motif,mode:val('rT')||'translate',dist:+val('rDist')||4,count:+val('rCount')||5}}
+function drawReference(show){$('referenceStage').innerHTML=patternSVG(referenceOpts(),ST.ref);syncCompare();if(show)toast('已按结构化参数严格执行；这不是GAI输出')}
+function toggleRef(k){ST.ref[k]=!ST.ref[k];drawReference();save()}
+function syncCompare(){
+  if(!$('comparePeer'))return;
+  $('comparePeer').innerHTML=ST.peerSketch?`<img src="${ST.peerSketch}" alt="同伴盲执行草图">`:(checked('peerPaper')?'同伴已在方格纸完成；请将纸质草图与本屏并排。':'尚未保存草图／纸上记录');
+  $('compareAI').innerHTML=ST.image?`<img src="${ST.image}" alt="GAI原始输出截图">`:(val('aiText').trim()?esc(val('aiText')):'尚未导入原始输出');
+  $('compareRef').innerHTML=patternSVG(referenceOpts(),{grid:true,points:true,bounds:true,arrows:true});
+}
+function updateRubric(){let items=[['结构提取',!!ST.done.observe],['规则表达',!!ST.lockedAt&&val('rG').trim().length>3],['证据检验',[1,2,3,4].every(i=>checked('ev'+i))],['修正迁移',!!ST.done.transfer]];$('rubric').innerHTML=items.map(x=>`<div class="rub ${x[1]?'ok':''}"><strong>${x[0]}</strong>${x[1]?'已留下证据':'尚需完成'}</div>`).join('');save()}
+function finishEvidence(){if(val('rG').trim().length<4||val('rV').trim().length<12){toast('请先用自己的话补全G和验收条件V');return}if(![1,2,3,4].every(i=>checked('ev'+i))||![1,2,3,4].every(i=>val('evNote'+i).trim().length>5)||!val('verdict')||!val('keyEvidence').trim()){toast('请完成四项勾选，并分别写下证据、最终判定和关键证据');return}ST.done.evidence=true;makeRule2(true);save();toast('数学验收已保存');go(5)}
+function actionText(){let d=val('rDir')||'向右',n=val('rDist')||'__';if(val('rT')==='reflect')return`先关于每个单位的右边界作轴对称，再${d}平移${n}格`;if(val('rT')==='rotate')return`先绕每个单位右边界中点旋转180°，再${d}平移${n}格`;return`${d}平移${n}格`}
+function composeRule(){let v=(val('rV')||'对应点、运动性质和相邻边界关系').replace(/[。；;，,\s]+$/,'');return`以${val('rG')||'所圈定的图案'}为一个单位纹样，将它${actionText()}；按这一顺序重复，连续形成${val('rCount')||'__'}个单元。验收时检查：${v}。`}
+function makeRule2(force){if(force||!val('rule2').trim())$('rule2').value=composeRule();$('v1View').textContent=val('rule1')||'尚未形成';renderDiff();save()}
+function charDiff(a,b){
+  a=[...a];b=[...b];let n=a.length,m=b.length,dp=Array.from({length:n+1},()=>new Uint16Array(m+1));for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)dp[i][j]=a[i]===b[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);let i=0,j=0,oa='',nb='';while(i<n||j<m){if(i<n&&j<m&&a[i]===b[j]){let c=esc(a[i]);oa+=c;nb+=c;i++;j++}else if(j<m&&(i===n||dp[i][j+1]>=dp[i+1][j])){nb+='<ins class="ins">'+esc(b[j++])+'</ins>'}else{oa+='<del class="del">'+esc(a[i++])+'</del>'}}return[oa,nb]}
+function renderDiff(){let d=charDiff(val('rule1'),val('rule2'));$('diffOld').innerHTML=d[0]||'尚无1.0';$('diffNew').innerHTML=d[1]||'尚无2.0'}
+function drawTransfer(){let t=val('transferType')||'reflect';$('transferStage').innerHTML=patternSVG({kind:ST.motif,mode:t,dist:t==='translate'?5:4,count:4},{grid:true,points:true,bounds:true,arrows:true})}
+function finishTransfer(){if(!val('studentCode').trim()){toast('请先填写匿名个人编号');return}if(!val('transferKeep').trim()||!val('transferChange').trim()||!val('transferV').trim()||!val('transferJudge').trim()){toast('请独立完成四项迁移回答');return}ST.done.transfer=true;save();updateFinalRubric();toast('个人出门条已提交，证据链完成')}
+function updateFinalRubric(){let data=[['结构提取',ST.done.observe,'能圈定单位并说明运动关系'],['规则表达',ST.done.evidence,'能用G、T、λ、D、V排除主要歧义'],['证据检验',[1,2,3,4].every(i=>checked('ev'+i)),'能用对应点、性质和边界作判断'],['修正迁移',ST.done.transfer,'能说明新纹样中保留与改变的条件']];$('finalRubric').innerHTML=data.map(x=>`<div class="rub ${x[1]?'ok':''}"><strong>${x[0]}｜${x[1]?'已呈现':'待观察'}</strong>${x[2]}</div>`).join('')}
+
+function collectReport(){save();let img=ST.image?`<img src="${ST.image}" style="max-width:720px;max-height:420px">`:'（未导入GAI截图）',peerImg=ST.peerSketch?`<img src="${ST.peerSketch}" style="max-width:720px;max-height:300px">`:(ST.peerPaper?'（同伴在方格纸完成，见纸质证据）':'（未保存同伴草图）');let ev=[1,2,3,4].map(i=>`<li>${esc(val('evNote'+i))}</li>`).join('');return`<!doctype html><meta charset="utf-8"><title>二方连续纹样学习证据报告</title><style>body{font-family:PingFang SC,Microsoft YaHei,sans-serif;max-width:900px;margin:35px auto;color:#172033;line-height:1.7;padding:0 20px}h1{border-bottom:4px solid #2455d6;padding-bottom:10px}h2{margin-top:28px;color:#173d9e}.box{border:1px solid #ccd6e5;border-radius:10px;padding:12px 15px;white-space:pre-wrap}.meta{background:#f2f6ff;padding:10px 14px}img{display:block;margin:10px 0;border:1px solid #ccd6e5}@media print{body{margin:0}}</style><h1>二方连续纹样 · 生成规则学习证据报告</h1><div class="meta">组码：${esc(val('groupCode')||'未填')}　个人编号：${esc(val('studentCode')||'未填')}　导出时间：${new Date().toLocaleString('zh-CN',{hour12:false})}<br>说明：本报告记录一课时行为证据，不自动给出素养提升结论。</div><h2>1. 教材观察与运动分析</h2><div class="box">纹样：${esc(motifs[ST.motif].name)}\n基本图案：${esc(val('obsG'))}\n方向：${esc(val('obsDir'))}\n初步运动：${esc(val('obsT'))}\n依据：${esc(val('obsNote'))}</div><h2>2. 规则卡1.0</h2><div class="box">${esc(val('rule1'))}\n\n执行前预测：${esc(val('predictionNote'))}</div><h2>3. 双重执行</h2><div class="box"><b>同伴解释：</b>${esc(val('peerT'))}，${esc(val('peerDist'))}格，${esc(val('peerCount'))}个单元\n<b>同伴疑问：</b>${esc(val('peerQuestion'))}\n<b>同伴状态：</b>${esc(val('peerOutcome'))}</div>${peerImg}<div class="box"><b>GAI原始输出：</b>\n${esc(val('aiText'))}\n<b>AI状态：</b>${esc(val('aiOutcome'))}\n<b>差异诊断：</b>${esc(val('differenceNote'))}\n<b>AI来源：</b>${ST.offline?'教师预置网络预案（非实时GAI）':'课堂真实GAI原始输出'}</div>${img}<h2>4. 五要素规则与数学验收</h2><div class="box">${esc($('structuredRule').textContent)}\n\n最终判定：${esc(val('verdict'))}\n关键证据：${esc(val('keyEvidence'))}</div><ol>${ev}</ol><h2>5. 规则版本变化</h2><div class="box"><b>1.0：</b>${esc(val('rule1'))}\n\n<b>2.0：</b>${esc(val('rule2'))}\n\n修改要素：${esc((ST.changed||[]).join('、'))}</div><h2>6. 教材内迁移出门条</h2><div class="box">个人编号：${esc(val('studentCode'))}\n保留：${esc(val('transferKeep'))}\n\n改变：${esc(val('transferChange'))}\n\n验收条件：${esc(val('transferV'))}\n\nAI与同伴不同时：${esc(val('transferJudge'))}</div><p>生成工具：二方连续纹样 · 可检验规则实验室 v1.1</p>`}
+function exportReport(){if(!val('rule1').trim()){toast('至少先形成规则1.0再导出');return}let blob=new Blob([collectReport()],{type:'text/html;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='二方连续纹样_学习证据_'+(val('groupCode')||'未编号')+'.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1200);toast('已导出学习证据报告')}
+function resetAll(){if(!confirm('将清空本机保存的本组规则、执行记录和检验证据。确定继续吗？'))return;localStorage.removeItem('friezeRuleLab');location.reload()}
+
+function init(){buildMotifs();restore();buildMotifs();drawObserve();drawPeer();initSketch();makePrompt(false);syncRule();drawReference();drawTransfer();updateMatrix();updateRubric();updateFinalRubric();renderDiff();syncCompare();if(ST.lockedAt){$('rule1').readOnly=true;$('lockInfo').textContent='已锁定：'+ST.lockedAt}$('rule1Echo').textContent='规则1.0：'+(val('rule1')||'尚未锁定');if(ST.image){$('aiPreview').src=ST.image;$('aiPreview').classList.remove('hide')}progress()}
+init();
+</script>
+</body>
+</html>
